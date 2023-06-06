@@ -1,655 +1,741 @@
 - Start
-  - Is the attack digital?
-    - Digital
-      - Did it involve communication or social engineering?
-        - Yes
-          - Is the communication medium email?
-            - Yes
-              - **Phishing**
-                - Indicators: Generic greetings, poor spelling/grammar, urgent action required, and suspicious links or attachments.
-                - Example: An email from a bank asking you to verify your login details.
-                - Solution: Never click on suspicious links or disclose personal information. Use spam filters and email security solutions.
-                - Vulnerability: Lack of user awareness. Inadequate email security solutions.
-                - Precaution: Regular user training on phishing. Implementing multi-factor authentication.
-                - Logging/Monitoring: Email security solutions that log phishing attempts. Regular audits.
-              - **Spear Phishing**
-                - Indicators: Targeted email with specific details about you. Email seemingly from someone you know or trust.
-                - Example: An email from your boss asking you to make a wire transfer.
-                - Solution: Verifying requests independently via other channels. Using email security solutions.
-                - Vulnerability: Lack of user awareness. Publicly available personal or company information.
-                - Precaution: Regular user training on spear phishing. Limiting public availability of personal and company info.
-                - Logging/Monitoring: Email security solutions that log phishing attempts. Regular audits.
-              - **Whaling**
-                - Indicators: High-level executives targeted. Large financial transactions or sensitive data involved.
-                - Example: A CFO receives an email seemingly from the CEO asking to transfer funds.
-                - Solution: Verifying requests independently via other channels. Executive training on whaling.
-                - Vulnerability: Lack of executive awareness. Publicly available personal or company information.
-                - Precaution: Regular executive training on whaling. Implementing strong financial controls.
-                - Logging/Monitoring: Email security solutions that log phishing attempts. Regular audits.
-            - Is the communication medium phone or SMS?
+    - Is the attack physical?
+        - Physical
+            - Did it involve unauthorized access or copying of a physical item (card, document)?
+                - Yes
+                    - **Dumpster diving**
+                        - Indicators: Confidential documents or storage media found in trash bins. Evidence of unauthorized personnel in restricted waste disposal areas.
+                        - Example: Finding a printout of sensitive information in the trash.
+                        - Solution: Secure disposal of sensitive documents (shredding, etc.). Clear desk policy.
+                        - Vulnerability: Improper disposal of sensitive documents.
+                        - Precaution: Employee training on secure document disposal. Regular audits.
+                        - Logging/Monitoring: Surveillance cameras in disposal areas. Regular audits.
+                    - **Skimming**
+                        - Indicators: Unauthorized devices attached to card readers. Unusual transactions or charges on financial statements.
+                        - Example: Finding a device attached to an ATM that's designed to read card data.
+                        - Solution: Regular inspection and maintenance of card-reading devices. Implement chip and PIN technology.
+                        - Vulnerability: Outdated card reader technology. Unattended card readers.
+                        - Precaution: Regular inspections. User awareness to check for suspicious devices.
+                        - Logging/Monitoring: Video surveillance of card reader locations. Regular audits.
+                - No
+                    - **Card cloning**
+                        - Indicators: Unexpected card activity or transactions. Multiple cards with the same data.
+                        - Example: Unauthorized charges on a credit card statement, even though the card was never lost.
+                        - Solution: Implement chip and PIN technology. Regular monitoring of account activity.
+                        - Vulnerability: Magnetic stripe technology. Physical access to the card.
+                        - Precaution: User awareness to guard cards. Regular checking of account activity.
+                        - Logging/Monitoring: Regular audits. Bank systems to detect unusual transaction patterns.
+            - Did it involve unauthorized access to a physical location (building, room)?
+                - Yes
+                    - **Tailgating**
+                        - Indicators: Unexpected persons in restricted areas. Evidence of door access without corresponding access log.
+                        - Example: An individual enters a restricted office space by following closely behind an authorized employee.
+                        - Solution: Implementing strict access control procedures. Installing turnstile doors or mantrap systems.
+                        - Vulnerability: Inadequate physical security. Lack of user awareness.
+                        - Precaution: Training employees not to let others tailgate. Strict visitor management policy.
+                        - Logging/Monitoring: CCTV monitoring. Regular audits.
+                    - **Shoulder surfing**
+                        - Indicators: Unauthorized individuals loitering around sensitive areas. Unauthorized knowledge or action based on viewed data.
+                        - Example: An individual observes as an employee types their password.
+                        - Solution: Privacy screens on monitors. Secure workspace design.
+                        - Vulnerability: Open office spaces. Visible screens or keyboards.
+                        - Precaution: User awareness to guard the screen while entering sensitive information.
+                        - Logging/Monitoring: Video surveillance of sensitive workspaces.
+                - No
+                    - Did it involve malicious hardware?
+                        - Yes
+                            - **Malicious Universal Serial Bus (USB) cable**
+                                - Indicators: Unknown USB cables connected to devices. Malicious activity upon connecting USB cable.
+                                - Example: A USB cable that installs malware when connected to a device.
+                                - Solution: Disabling auto-run for external devices. Regular hardware inspections.
+                                - Vulnerability: Auto-run enabled on devices. Lack of awareness about malicious hardware.
+                                - Precaution: Employee training on hardware security. Only use trusted hardware.
+                                - Logging/Monitoring: Regular hardware audits.
+                        - No
+                            - **Malicious flash drive**
+                                - Indicators: Unknown flash drives connected to systems. Malicious activity upon connecting the flash drive.
+                                - Example: A flash drive that installs malware when inserted into a computer.
+                                - Solution: Disabling auto-run for external devices. Regular hardware inspections.
+                                - Vulnerability: Auto-run enabled on systems. Lack of awareness about malicious hardware.
+                                - Precaution: Employee training on hardware security. Only use trusted hardware.
+                                - Logging/Monitoring: Regular hardware audits. System logs of device connections.
+
+    - Is the attack digital?
+      - Digital
+        - Did it involve communication or social engineering?
+          - Yes
+            - Is the communication medium email?
               - Yes
-                - **Smishing**
-                  - Indicators: Suspicious text messages with links or requesting personal information.
-                  - Example: A text message from a bank asking you to verify your login details.
-                  - Solution: Never click on suspicious links or disclose personal information via text.
-                  - Vulnerability: Lack of user awareness. Publicly available phone numbers.
-                  - Precaution: Regular user training on smishing.
-                  - Logging/Monitoring: Network-level spam detection and blocking. Regular audits.
-                - **Vishing**
-                  - Indicators: Suspicious phone calls asking for personal information or urgent action.
-                  - Example: A phone call from someone posing as tech support asking for your password.
-                  - Solution: Never disclose personal information over the phone. Verify requests independently.
-                  - Vulnerability: Lack of user awareness. Publicly available phone numbers.
-                  - Precaution: Regular user training on vishing.
-                  - Logging/Monitoring: Call recording (where legal). Regular audits.
-            - Did it involve spam over instant messaging (SPIM)?
-              - Yes
-                - **SPIM**
-                  - Indicators: Unsolicited instant messages with spam content or links.
-                  - Example: Random messages from unknown contacts promoting products or services.
-                  - Solution: Block unknown contacts, avoid clicking on suspicious links, use spam filters.
-                  - Vulnerability: Lack of user awareness. Inadequate instant messaging security measures.
-                  - Precaution: Regular user training on SPIM. Using secure messaging platforms.
-                  - Logging/Monitoring: Instant messaging security solutions that log SPIM attempts. Regular audits.
-            - Did it involve eliciting information or shoulder surfing?
-              - Yes
-                - **Eliciting Information**
-                  - Indicators: Attempts to obtain sensitive information through social engineering techniques.
-                  - Example: A stranger striking up a conversation and asking for personal details.
-                  - Solution: Be cautious with sharing sensitive information. Verify the identity of individuals before disclosing information.
-                  - Vulnerability: Lack of user awareness. Trusting strangers too easily.
-                  - Precaution: Regular user training on social engineering techniques. Developing a cautious mindset.
-                  - Logging/Monitoring: N/A
-                - **Shoulder Surfing**
-                  - Indicators: Someone spying on your activities or sensitive information by looking over your shoulder.
-                  - Example: Someone standing close and trying to see your PIN as you enter it on an ATM.
-                  - Solution: Be aware of your surroundings, shield your activities from prying eyes.
-                  - Vulnerability: Lack of user awareness. Carelessness in protecting sensitive information.
-                  - Precaution: Regular user training on protecting sensitive information. Practicing privacy measures.
-                  - Logging/Monitoring: N/A 
-            - Did it involve prepending or identity fraud?
-              - Yes
-                - **Prepending**
-                  - Indicators: Adding false or misleading information to a message or document.
-                  - Example: Modifying email headers to make the message appear from a trusted source.
-                  - Solution: Verify the authenticity of messages and documents. Pay attention to inconsistencies.
-                  - Vulnerability: Lack of user awareness. Trusting information without verification.
-                  - Precaution: Regular user training on verifying information sources. Checking for signs of tampering.
-                  - Logging/Monitoring: N/A
-                - **Identity Fraud**
-                  - Indicators: Unauthorized use of someone else's personal information for fraudulent purposes.
-                  - Example: Opening credit card accounts in another person's name.
-                  - Solution: Protect personal information, use strong authentication methods, monitor credit reports.
-                  - Vulnerability: Lack of user awareness. Insufficient security measures to protect personal information.
-                  - Precaution: Regular user training on protecting personal information. Using identity theft protection services.
-                  - Logging/Monitoring: N/A
-            - Did it involve invoice scams, credential harvesting, or reconnaissance?
-              - Yes
-                - **Invoice Scams**
-                  - Indicators: Fraudulent invoices sent to trick individuals or businesses into making payments.
-                  - Example: Receiving a fake invoice requesting payment for a non-existent service.
-                  - Solution: Verify the legitimacy of invoices, confirm details with known contacts.
-                  - Vulnerability: Lack of user awareness. Inadequate invoice verification processes.
-                  - Precaution: Regular user training on recognizing invoice scams. Implementing invoice validation procedures.
-                  - Logging/Monitoring: N/A
-                - **Credential Harvesting**
-                  - Indicators: Attempts to obtain login credentials through deceptive methods.
-                  - Example: Creating a fake login page to steal usernames and passwords.
-                  - Solution: Be cautious of login prompts, verify website authenticity, use strong passwords.
-                  - Vulnerability: Lack of user awareness. Falling for deceptive login prompts.
-                  - Precaution: Regular user training on recognizing phishing techniques. Using password managers.
-                  - Logging/Monitoring: N/A
-                - **Reconnaissance**
-                  - Indicators: Gathering information about targets for future attacks.
-                  - Example: Scanning a network to identify vulnerable systems and potential entry points.
-                  - Solution: Monitor network activity, implement intrusion detection systems, apply security patches.
-                  - Vulnerability: Lack of network monitoring. Unpatched systems and software.
-                  - Precaution: Regular network monitoring and vulnerability assessments. Prompt patching of systems.
-                  - Logging/Monitoring: Network traffic monitoring, system logs.
-            - Did it involve hoax, impersonation, pretexting, or influence campaigns?
-              - Yes
-                - **Hoax**
-                  - Indicators: Spreading false information with the intent to deceive or trick others.
-                  - Example: Sharing a fabricated news story to mislead readers.
-                  - Solution: Verify information from trusted sources, fact-check before sharing.
-                  - Vulnerability: Lack of user awareness. Believing and spreading misinformation.
-                  - Precaution: Regular user training on spotting fake news. Promoting media literacy.
-                  - Logging/Monitoring: N/A
-                - **Impersonation**
-                  - Indicators: Pretending to be someone else to deceive or gain unauthorized access.
-                  - Example: Creating a fake social media profile pretending to be a celebrity.
-                  - Solution: Be cautious of unknown contacts, verify identities before trusting or sharing information.
-                  - Vulnerability: Lack of user awareness. Trusting online identities without verification.
-                  - Precaution: Regular user training on online identity verification. Reporting suspicious accounts.
-                  - Logging/Monitoring: N/A
-                - **Pretexting**
-                  - Indicators: Creating a false scenario to deceive individuals and extract information.
-                  - Example: Posing as a bank representative and requesting personal details for a "security check."
-                  - Solution: Be skeptical of unsolicited requests for personal information. Verify the authenticity independently.
-                  - Vulnerability: Lack of user awareness. Trusting requests without independent verification.
-                  - Precaution: Regular user training on recognizing pretexting techniques. Protecting personal information.
-                  - Logging/Monitoring: N/A
-                - **Influence Campaigns**
-                  - Indicators: Coordinated efforts to shape public opinion or manipulate individuals.
-                  - Example: Spreading misinformation through social media to influence election outcomes.
-                  - Solution: Be critical of information sources, fact-check before forming opinions.
-                  - Vulnerability: Lack of user awareness. Falling for manipulative tactics.
-                  - Precaution: Regular user training on recognizing manipulation techniques. Promoting media literacy.
-                  - Logging/Monitoring: N/A
-      - Did it involve malware or unwanted software?
-        - Yes
-          - **Ransomware**
-            - Indicators: Files encrypted, ransom message displayed, inability to access system or data.
-            - Example: WannaCry ransomware that encrypts user's data and asks for Bitcoin payment.
-            - Solution: Isolate affected systems, restore from clean backup, avoid paying ransom.
-            - Vulnerability: Out-of-date software, poor network security, lack of awareness.
-            - Precaution: Regular backups, keep systems updated, user training.
-            - Logging/Monitoring: Intrusion detection systems (IDS), system logs, network traffic monitoring
-          - **Trojans**
-            - Indicators: Unexpected system behavior, unauthorized system changes, slow performance.
-            - Example: Emotet trojan that infiltrates systems, steals data, and installs more malware.
-            - Solution: Use antivirus software, isolate affected systems, remove malicious software, restore from clean backup.
-            - Vulnerability: Poor security practices, lack of antivirus, user downloading untrusted files.
-            - Precaution: Regular system scans, keep systems updated, user training.
-            - Logging/Monitoring: Antivirus software logs, system logs, IDS.
-          - **Worms**
-            - Indicators: Rapid spread across network, high network traffic, self-replicating behavior.
-            - Example: Conficker worm that exploits system vulnerabilities to spread across networks.
-            - Solution: Patching and updating systems, isolating infected systems, antivirus software.
-            - Vulnerability: Out-of-date software, poor network security.
-            - Precaution: Regular updates and patches, network security measures, user training.
-            - Logging/Monitoring: Network traffic monitoring, IDS, system logs.
-          - **Potentially Unwanted Programs (PUPs)**
-            - Indicators: Unexpected pop-ups or advertisements, new toolbars or software, slow system performance.
-            - Example: Unwanted browser toolbar that tracks browsing history and displays ads.
-            - Solution: Use antivirus or anti-malware software to remove PUPs, uninstall unwanted software.
-            - Vulnerability: User downloading untrusted files or software.
-            - Precaution: User training, regular system scans, software whitelisting.
-            - Logging/Monitoring: Antivirus software logs, system logs.
-          - **Fileless Virus**
-            - Indicators: Unusual system or network behavior, high CPU usage, unexpected network connections.
-            - Example: Poweliks malware that resides in system memory and registry.
-            - Solution: Use advanced threat protection software, isolate affected systems, remove malicious software.
-            - Vulnerability: Unmonitored system or network activity, lack of advanced threat protection.
-            - Precaution: Regular system scans, system hardening, network monitoring.
-            - Logging/Monitoring: System logs, IDS, advanced threat protection logs.
-          - **Command and Control (C2)**
-            - Indicators: Communication with a remote server for receiving commands and exfiltrating data.
-            - Example: Malware establishing a connection with a command and control server to receive instructions.
-            - Solution: Detect and block C2 communications, isolate affected systems, remove malware.
-            - Vulnerability: Lack of network monitoring, insufficient security measures.
-            - Precaution: Implement network traffic monitoring, intrusion detection systems, and strong network security controls.
-            - Logging/Monitoring: Network traffic monitoring, IDS, system logs.
+                - **Phishing**
+                  - Indicators: Generic greetings, poor spelling/grammar, urgent action required, and suspicious links or attachments.
+                  - Example: An email from a bank asking you to verify your login details.
+                  - Solution: Never click on suspicious links or disclose personal information. Use spam filters and email security solutions.
+                  - Vulnerability: Lack of user awareness. Inadequate email security solutions.
+                  - Precaution: Regular user training on phishing. Implementing multi-factor authentication.
+                  - Logging/Monitoring: Email security solutions that log phishing attempts. Regular audits.
+                - **Spear Phishing**
+                  - Indicators: Targeted email with specific details about you. Email seemingly from someone you know or trust.
+                  - Example: An email from your boss asking you to make a wire transfer.
+                  - Solution: Verifying requests independently via other channels. Using email security solutions.
+                  - Vulnerability: Lack of user awareness. Publicly available personal or company information.
+                  - Precaution: Regular user training on spear phishing. Limiting public availability of personal and company info.
+                  - Logging/Monitoring: Email security solutions that log phishing attempts. Regular audits.
+                - **Whaling**
+                  - Indicators: High-level executives targeted. Large financial transactions or sensitive data involved.
+                  - Example: A CFO receives an email seemingly from the CEO asking to transfer funds.
+                  - Solution: Verifying requests independently via other channels. Executive training on whaling.
+                  - Vulnerability: Lack of executive awareness. Publicly available personal or company information.
+                  - Precaution: Regular executive training on whaling. Implementing strong financial controls.
+                  - Logging/Monitoring: Email security solutions that log phishing attempts. Regular audits.
+              - Is the communication medium phone or SMS?
+                - Yes
+                  - **Smishing**
+                    - Indicators: Suspicious text messages with links or requesting personal information.
+                    - Example: A text message from a bank asking you to verify your login details.
+                    - Solution: Never click on suspicious links or disclose personal information via text.
+                    - Vulnerability: Lack of user awareness. Publicly available phone numbers.
+                    - Precaution: Regular user training on smishing.
+                    - Logging/Monitoring: Network-level spam detection and blocking. Regular audits.
+                  - **Vishing**
+                    - Indicators: Suspicious phone calls asking for personal information or urgent action.
+                    - Example: A phone call from someone posing as tech support asking for your password.
+                    - Solution: Never disclose personal information over the phone. Verify requests independently.
+                    - Vulnerability: Lack of user awareness. Publicly available phone numbers.
+                    - Precaution: Regular user training on vishing.
+                    - Logging/Monitoring: Call recording (where legal). Regular audits.
+              - Did it involve spam over instant messaging (SPIM)?
+                - Yes
+                  - **SPIM**
+                    - Indicators: Unsolicited instant messages with spam content or links.
+                    - Example: Random messages from unknown contacts promoting products or services.
+                    - Solution: Block unknown contacts, avoid clicking on suspicious links, use spam filters.
+                    - Vulnerability: Lack of user awareness. Inadequate instant messaging security measures.
+                    - Precaution: Regular user training on SPIM. Using secure messaging platforms.
+                    - Logging/Monitoring: Instant messaging security solutions that log SPIM attempts. Regular audits.
+              - Did it involve eliciting information or shoulder surfing?
+                - Yes
+                  - **Eliciting Information**
+                    - Indicators: Attempts to obtain sensitive information through social engineering techniques.
+                    - Example: A stranger striking up a conversation and asking for personal details.
+                    - Solution: Be cautious with sharing sensitive information. Verify the identity of individuals before disclosing information.
+                    - Vulnerability: Lack of user awareness. Trusting strangers too easily.
+                    - Precaution: Regular user training on social engineering techniques. Developing a cautious mindset.
+                    - Logging/Monitoring: N/A
+                  - **Shoulder Surfing**
+                    - Indicators: Someone spying on your activities or sensitive information by looking over your shoulder.
+                    - Example: Someone standing close and trying to see your PIN as you enter it on an ATM.
+                    - Solution: Be aware of your surroundings, shield your activities from prying eyes.
+                    - Vulnerability: Lack of user awareness. Carelessness in protecting sensitive information.
+                    - Precaution: Regular user training on protecting sensitive information. Practicing privacy measures.
+                    - Logging/Monitoring: N/A 
+              - Did it involve prepending or identity fraud?
+                - Yes
+                  - **Prepending**
+                    - Indicators: Adding false or misleading information to a message or document.
+                    - Example: Modifying email headers to make the message appear from a trusted source.
+                    - Solution: Verify the authenticity of messages and documents. Pay attention to inconsistencies.
+                    - Vulnerability: Lack of user awareness. Trusting information without verification.
+                    - Precaution: Regular user training on verifying information sources. Checking for signs of tampering.
+                    - Logging/Monitoring: N/A
+                  - **Identity Fraud**
+                    - Indicators: Unauthorized use of someone else's personal information for fraudulent purposes.
+                    - Example: Opening credit card accounts in another person's name.
+                    - Solution: Protect personal information, use strong authentication methods, monitor credit reports.
+                    - Vulnerability: Lack of user awareness. Insufficient security measures to protect personal information.
+                    - Precaution: Regular user training on protecting personal information. Using identity theft protection services.
+                    - Logging/Monitoring: N/A
+              - Did it involve invoice scams, credential harvesting, or reconnaissance?
+                - Yes
+                  - **Invoice Scams**
+                    - Indicators: Fraudulent invoices sent to trick individuals or businesses into making payments.
+                    - Example: Receiving a fake invoice requesting payment for a non-existent service.
+                    - Solution: Verify the legitimacy of invoices, confirm details with known contacts.
+                    - Vulnerability: Lack of user awareness. Inadequate invoice verification processes.
+                    - Precaution: Regular user training on recognizing invoice scams. Implementing invoice validation procedures.
+                    - Logging/Monitoring: N/A
+                  - **Credential Harvesting**
+                    - Indicators: Attempts to obtain login credentials through deceptive methods.
+                    - Example: Creating a fake login page to steal usernames and passwords.
+                    - Solution: Be cautious of login prompts, verify website authenticity, use strong passwords.
+                    - Vulnerability: Lack of user awareness. Falling for deceptive login prompts.
+                    - Precaution: Regular user training on recognizing phishing techniques. Using password managers.
+                    - Logging/Monitoring: N/A
+                  - **Reconnaissance**
+                    - Indicators: Gathering information about targets for future attacks.
+                    - Example: Scanning a network to identify vulnerable systems and potential entry points.
+                    - Solution: Monitor network activity, implement intrusion detection systems, apply security patches.
+                    - Vulnerability: Lack of network monitoring. Unpatched systems and software.
+                    - Precaution: Regular network monitoring and vulnerability assessments. Prompt patching of systems.
+                    - Logging/Monitoring: Network traffic monitoring, system logs.
+              - Did it involve hoax, impersonation, pretexting, or influence campaigns?
+                - Yes
+                  - **Hoax**
+                    - Indicators: Spreading false information with the intent to deceive or trick others.
+                    - Example: Sharing a fabricated news story to mislead readers.
+                    - Solution: Verify information from trusted sources, fact-check before sharing.
+                    - Vulnerability: Lack of user awareness. Believing and spreading misinformation.
+                    - Precaution: Regular user training on spotting fake news. Promoting media literacy.
+                    - Logging/Monitoring: N/A
+                  - **Impersonation**
+                    - Indicators: Pretending to be someone else to deceive or gain unauthorized access.
+                    - Example: Creating a fake social media profile pretending to be a celebrity.
+                    - Solution: Be cautious of unknown contacts, verify identities before trusting or sharing information.
+                    - Vulnerability: Lack of user awareness. Trusting online identities without verification.
+                    - Precaution: Regular user training on online identity verification. Reporting suspicious accounts.
+                    - Logging/Monitoring: N/A
+                  - **Pretexting**
+                    - Indicators: Creating a false scenario to deceive individuals and extract information.
+                    - Example: Posing as a bank representative and requesting personal details for a "security check."
+                    - Solution: Be skeptical of unsolicited requests for personal information. Verify the authenticity independently.
+                    - Vulnerability: Lack of user awareness. Trusting requests without independent verification.
+                    - Precaution: Regular user training on recognizing pretexting techniques. Protecting personal information.
+                    - Logging/Monitoring: N/A
+                  - **Influence Campaigns**
+                    - Indicators: Coordinated efforts to shape public opinion or manipulate individuals.
+                    - Example: Spreading misinformation through social media to influence election outcomes.
+                    - Solution: Be critical of information sources, fact-check before forming opinions.
+                    - Vulnerability: Lack of user awareness. Falling for manipulative tactics.
+                    - Precaution: Regular user training on recognizing manipulation techniques. Promoting media literacy.
+                    - Logging/Monitoring: N/A
+        - Did it involve malware or unwanted software?
+          - Yes
+            - **Ransomware**
+              - Indicators: Files encrypted, ransom message displayed, inability to access system or data.
+              - Example: WannaCry ransomware that encrypts user's data and asks for Bitcoin payment.
+              - Solution: Isolate affected systems, restore from clean backup, avoid paying ransom.
+              - Vulnerability: Out-of-date software, poor network security, lack of awareness.
+              - Precaution: Regular backups, keep systems updated, user training.
+              - Logging/Monitoring: Intrusion detection systems (IDS), system logs, network traffic monitoring
+            - **Trojans**
+              - Indicators: Unexpected system behavior, unauthorized system changes, slow performance.
+              - Example: Emotet trojan that infiltrates systems, steals data, and installs more malware.
+              - Solution: Use antivirus software, isolate affected systems, remove malicious software, restore from clean backup.
+              - Vulnerability: Poor security practices, lack of antivirus, user downloading untrusted files.
+              - Precaution: Regular system scans, keep systems updated, user training.
+              - Logging/Monitoring: Antivirus software logs, system logs, IDS.
+            - **Worms**
+              - Indicators: Rapid spread across network, high network traffic, self-replicating behavior.
+              - Example: Conficker worm that exploits system vulnerabilities to spread across networks.
+              - Solution: Patching and updating systems, isolating infected systems, antivirus software.
+              - Vulnerability: Out-of-date software, poor network security.
+              - Precaution: Regular updates and patches, network security measures, user training.
+              - Logging/Monitoring: Network traffic monitoring, IDS, system logs.
+            - **Potentially Unwanted Programs (PUPs)**
+              - Indicators: Unexpected pop-ups or advertisements, new toolbars or software, slow system performance.
+              - Example: Unwanted browser toolbar that tracks browsing history and displays ads.
+              - Solution: Use antivirus or anti-malware software to remove PUPs, uninstall unwanted software.
+              - Vulnerability: User downloading untrusted files or software.
+              - Precaution: User training, regular system scans, software whitelisting.
+              - Logging/Monitoring: Antivirus software logs, system logs.
+            - **Fileless Virus**
+              - Indicators: Unusual system or network behavior, high CPU usage, unexpected network connections.
+              - Example: Poweliks malware that resides in system memory and registry.
+              - Solution: Use advanced threat protection software, isolate affected systems, remove malicious software.
+              - Vulnerability: Unmonitored system or network activity, lack of advanced threat protection.
+              - Precaution: Regular system scans, system hardening, network monitoring.
+              - Logging/Monitoring: System logs, IDS, advanced threat protection logs.
+            - **Command and Control (C2)**
+              - Indicators: Communication with a remote server for receiving commands and exfiltrating data.
+              - Example: Malware establishing a connection with a command and control server to receive instructions.
+              - Solution: Detect and block C2 communications, isolate affected systems, remove malware.
+              - Vulnerability: Lack of network monitoring, insufficient security measures.
+              - Precaution: Implement network traffic monitoring, intrusion detection systems, and strong network security controls.
+              - Logging/Monitoring: Network traffic monitoring, IDS, system logs.
 
-          - **Bots**
-            - Indicators: Infected systems controlled remotely for malicious purposes.
-            - Example: Computers participating in a botnet and carrying out coordinated attacks.
-            - Solution: Identify and remove bot infections, implement botnet detection/prevention measures.
-            - Vulnerability: Lack of host-based intrusion detection, unpatched systems.
-            - Precaution: Regular system scans, patching, network segmentation, and monitoring.
-            - Logging/Monitoring: System logs, network traffic monitoring, IDS.
+            - **Bots**
+              - Indicators: Infected systems controlled remotely for malicious purposes.
+              - Example: Computers participating in a botnet and carrying out coordinated attacks.
+              - Solution: Identify and remove bot infections, implement botnet detection/prevention measures.
+              - Vulnerability: Lack of host-based intrusion detection, unpatched systems.
+              - Precaution: Regular system scans, patching, network segmentation, and monitoring.
+              - Logging/Monitoring: System logs, network traffic monitoring, IDS.
 
-          - **Cryptomalware**
-            - Indicators: Malware that encrypts files and demands ransom for decryption.
-            - Example: CryptoLocker malware that encrypts user files and demands payment for the decryption key.
-            - Solution: Isolate affected systems, remove malware, restore files from backup, avoid paying ransom.
-            - Vulnerability: Lack of user awareness, outdated software, poor security practices.
-            - Precaution: Regular backups, system hardening, user education on safe browsing and email practices.
-            - Logging/Monitoring: Intrusion detection systems, system logs, network traffic monitoring.
+            - **Cryptomalware**
+              - Indicators: Malware that encrypts files and demands ransom for decryption.
+              - Example: CryptoLocker malware that encrypts user files and demands payment for the decryption key.
+              - Solution: Isolate affected systems, remove malware, restore files from backup, avoid paying ransom.
+              - Vulnerability: Lack of user awareness, outdated software, poor security practices.
+              - Precaution: Regular backups, system hardening, user education on safe browsing and email practices.
+              - Logging/Monitoring: Intrusion detection systems, system logs, network traffic monitoring.
 
-          - **Logic Bombs**
-            - Indicators: Malicious code designed to execute a harmful action upon meeting certain conditions.
-            - Example: Code that triggers data deletion upon a specific date or event.
-            - Solution: Identify and remove logic bombs, implement code review and testing procedures.
-            - Vulnerability: Lack of code review, insufficient change management processes.
-            - Precaution: Regular code reviews, strict change management procedures.
-            - Logging/Monitoring: System logs, application logs.
+            - **Logic Bombs**
+              - Indicators: Malicious code designed to execute a harmful action upon meeting certain conditions.
+              - Example: Code that triggers data deletion upon a specific date or event.
+              - Solution: Identify and remove logic bombs, implement code review and testing procedures.
+              - Vulnerability: Lack of code review, insufficient change management processes.
+              - Precaution: Regular code reviews, strict change management procedures.
+              - Logging/Monitoring: System logs, application logs.
 
-          - **Spyware**
-            - Indicators: Malware that secretly gathers and transmits user information.
-            - Example: Keylogger that captures keystrokes and sends them to an attacker.
-            - Solution: Use anti-spyware software, perform regular system scans, avoid downloading untrusted software.
-            - Vulnerability: Lack of user awareness, downloading untrusted software.
-            - Precaution: Regular system scans, user education on safe browsing and downloading practices.
-            - Logging/Monitoring: System logs, application logs.
+            - **Spyware**
+              - Indicators: Malware that secretly gathers and transmits user information.
+              - Example: Keylogger that captures keystrokes and sends them to an attacker.
+              - Solution: Use anti-spyware software, perform regular system scans, avoid downloading untrusted software.
+              - Vulnerability: Lack of user awareness, downloading untrusted software.
+              - Precaution: Regular system scans, user education on safe browsing and downloading practices.
+              - Logging/Monitoring: System logs, application logs.
 
-          - **Keyloggers**
-            - Indicators: Malware that records keystrokes to capture sensitive information.
-            - Example: Keylogger that captures login credentials and sends them to an attacker.
-            - Solution: Use anti-keylogger software, avoid untrusted software/downloads.
-            - Vulnerability: Lack of user awareness, downloading untrusted software.
-            - Precaution: Regular system scans, user education on safe browsing and downloading practices.
-            - Logging/Monitoring: System logs, application logs.
+            - **Keyloggers**
+              - Indicators: Malware that records keystrokes to capture sensitive information.
+              - Example: Keylogger that captures login credentials and sends them to an attacker.
+              - Solution: Use anti-keylogger software, avoid untrusted software/downloads.
+              - Vulnerability: Lack of user awareness, downloading untrusted software.
+              - Precaution: Regular system scans, user education on safe browsing and downloading practices.
+              - Logging/Monitoring: System logs, application logs.
 
-          - **Remote Access Trojan (RAT)**
-            - Indicators: Malware that provides unauthorized remote access to a compromised system.
-            - Example: RAT that allows an attacker to control a victim's computer remotely.
-            - Solution: Detect and remove RAT infections, implement strong authentication and access controls.
-            - Vulnerability: Lack of host-based intrusion detection, weak authentication methods.
-            - Precaution: Regular system scans, strong authentication mechanisms, network segmentation.
-            - Logging/Monitoring: System logs, network traffic monitoring, IDS.
+            - **Remote Access Trojan (RAT)**
+              - Indicators: Malware that provides unauthorized remote access to a compromised system.
+              - Example: RAT that allows an attacker to control a victim's computer remotely.
+              - Solution: Detect and remove RAT infections, implement strong authentication and access controls.
+              - Vulnerability: Lack of host-based intrusion detection, weak authentication methods.
+              - Precaution: Regular system scans, strong authentication mechanisms, network segmentation.
+              - Logging/Monitoring: System logs, network traffic monitoring, IDS.
 
-          - **Rootkit**
-            - Indicators: Malware designed to gain unauthorized access and hide its presence on a system.
-            - Example: Rootkit that provides remote control and hides its files and processes.
-            - Solution: Detect and remove rootkits using specialized tools, restore system integrity.
-            - Vulnerability: Lack of host-based intrusion detection, weak system security practices.
-            - Precaution: Regular system scans, system hardening, host-based intrusion detection.
-            - Logging/Monitoring: System logs, host-based intrusion detection logs.
+            - **Rootkit**
+              - Indicators: Malware designed to gain unauthorized access and hide its presence on a system.
+              - Example: Rootkit that provides remote control and hides its files and processes.
+              - Solution: Detect and remove rootkits using specialized tools, restore system integrity.
+              - Vulnerability: Lack of host-based intrusion detection, weak system security practices.
+              - Precaution: Regular system scans, system hardening, host-based intrusion detection.
+              - Logging/Monitoring: System logs, host-based intrusion detection logs.
 
-          - **Backdoor**
-            - Indicators: Malware that creates a hidden entry point to bypass normal authentication.
-            - Example: Backdoor that allows an attacker to gain unauthorized access to a system.
-            - Solution: Detect and remove backdoors, apply security patches, restrict unnecessary services.
-            - Vulnerability: Weak system security practices, unpatched systems.
-            - Precaution: Regular system scans, prompt patching, strict access controls.
-            - Logging/Monitoring: System logs, network traffic monitoring, IDS.
+            - **Backdoor**
+              - Indicators: Malware that creates a hidden entry point to bypass normal authentication.
+              - Example: Backdoor that allows an attacker to gain unauthorized access to a system.
+              - Solution: Detect and remove backdoors, apply security patches, restrict unnecessary services.
+              - Vulnerability: Weak system security practices, unpatched systems.
+              - Precaution: Regular system scans, prompt patching, strict access controls.
+              - Logging/Monitoring: System logs, network traffic monitoring, IDS.
 
-      - Did it involve password or account compromise?
-        - Yes
-          - **Spraying**
-            - Indicators: Multiple accounts experiencing login attempts with commonly used passwords.
-            - Example: An attacker trying to login to several accounts using a list of most commonly used passwords.
-            - Solution: Account lockout policies, use complex passwords, multi-factor authentication.
-            - Vulnerability: Weak passwords, no account lockout policy.
-            - Precaution: Regular password changes, user education on password security.
-            - Logging/Monitoring: Account authentication logs, intrusion detection system (IDS).
-          - **Dictionary Attack**
-            - Indicators: Multiple login attempts using words from a dictionary.
-            - Example: An attacker using a software that tries every word in a dictionary as a password.
-            - Solution: Account lockout policies, use complex passwords, multi-factor authentication.
-            - Vulnerability: Weak passwords, no account lockout policy.
-            - Precaution: Regular password changes, user education on password security.
-            - Logging/Monitoring: Account authentication logs, IDS.
-          - **Brute Force**
-            - Indicators: Multiple login attempts using all possible combinations.
-            - Example: An attacker using a software that tries every possible combination of characters as a password.
-            - Solution: Account lockout policies, use complex passwords, multi-factor authentication.
-            - Vulnerability: Weak passwords, no account lockout policy.
-            - Precaution: Regular password changes, user education on password security.
-            - Logging/Monitoring: Account authentication logs, IDS.
-          - **Offline**
-            - Indicators: Unauthorized access, data breach.
-            - Example: An attacker stealing a password hash file and cracking it offline.
-            - Solution: Encrypt stored password hashes, limit access to password hash files, use salted hashes.
-            - Vulnerability: Unencrypted or unsalted password hashes, poor access control.
-            - Precaution: Regular audits, user education on password security.
-            - Logging/Monitoring: Access logs, file integrity monitoring, IDS.
-          - **Rainbow Table**
-            - Indicators: Unauthorized access, data breach.
-            - Example: An attacker using precomputed hash values (rainbow table) to quickly find passwords.
-            - Solution: Use salted hashes, limit access to password hash files.
-            - Vulnerability: Unsalted password hashes, poor access control.
-            - Precaution: Regular audits, user education on password security.
-            - Logging/Monitoring: Access logs, file integrity monitoring, IDS.
-      - Did it involve domain names or web traffic manipulation?
-        - Yes
-          - **Pharming**
-            - Indicators: Unexpected redirection to fake website, SSL/TLS certificate errors.
-            - Example: A user is redirected to a malicious site even though the correct URL was entered.
-            - Solution: Use HTTPS, check for SSL/TLS certificate, DNSSEC.
-            - Vulnerability: Unsecured DNS, user unawareness.
-            - Precaution: Secure DNS settings, user education about secure browsing.
-            - Logging/Monitoring: Network traffic monitoring, DNS logs.
-          - **Watering Hole**
-            - Indicators: Legitimate website delivering malware, targeted users experiencing breaches.
-            - Example: A popular tech blog being compromised to target its visitors.
-            - Solution: Regular website scanning for vulnerabilities, use secure web gateways.
-            - Vulnerability: Vulnerable web servers, unaware users.
-            - Precaution: Regular web vulnerability scanning, user education on safe browsing.
-            - Logging/Monitoring: Website logs, network traffic monitoring, IDS.
-          - **Typosquatting**
-            - Indicators: Visiting a similar but incorrect website due to a typing error, SSL/TLS certificate errors.
-            - Example: A user types "gogle.com" instead of "google.com" and lands on a malicious site.
-            - Solution: User awareness, bookmark important websites, use security tools to detect such sites.
-            - Vulnerability: User unawareness, similar-looking domain names.
-            - Precaution: User education, use browsing security tools.
-            - Logging/Monitoring: Browser history, network traffic monitoring.
-      - Did it involve the use or abuse of AI/ML, compromise of third-party services or software, or cryptographic attacks?
-        - Yes
-          - **Adversarial AI/ML**
-            - Indicators: Unexpected AI/ML outputs, data poisoning.
-            - Example: Attackers manipulating training data to change AI behavior.
-            - Solution: Robust AI/ML models, validating training data, secure ML pipelines.
-            - Vulnerability: Unsecured training data, unvalidated inputs.
-            - Precaution: Regular audits of training data, secure ML practices.
-            - Logging/Monitoring: Monitor training data and ML outputs.
-          - **Supply-Chain Attacks**
-            - Indicators: Unusual behavior in third-party services or software.
-            - Example: The SolarWinds breach in 2020.
-            - Solution: Regular audits of third-party services, secure software development practices, updated software versions.
-            - Vulnerability: Unvalidated third-party software, outdated software versions.
-            - Precaution: Regular software audits, prompt updates.
-            - Logging/Monitoring: System behavior logs, network traffic monitoring.
-          - **Cryptographic Attacks**
-            - Indicators: Unauthorized access, data breaches.
-            - Example: Birthday attack, where two different inputs produce the same hash.
-            - Solution: Use of strong cryptographic algorithms, updated encryption protocols.
-            - Vulnerability: Weak or outdated cryptographic algorithms.
-            - Precaution: Regular cryptographic audits, updated protocols.
-            - Logging/Monitoring: Access logs, data breach detection systems.
-      - Did it involve Privilege escalation, Cross-site scripting, Injection, Pointer/object dereference, Directory traversal, or Buffer overflows?
-        - Yes
-          - **Privilege Escalation**
-            - Indicators: Unauthorized activities or access.
-            - Example: A regular user gaining administrative rights due to a software flaw.
-            - Solution: Implement least privilege principle, patching and updates, secure coding practices.
-            - Vulnerability: Software flaws, misconfigured permissions.
-            - Precaution: Regular system audits, prompt software updates.
-            - Logging/Monitoring: System access logs, behavior monitoring.
-          - **Cross-Site Scripting (XSS)**
-            - Indicators: Unwanted scripts running on webpages, user data theft.
-            - Example: A malicious script inserted into a comment on a blog that steals user cookie data.
-            - Solution: Input validation, secure coding practices, HTTPOnly cookies.
-            - Vulnerability: Insufficient input validation, insecure website coding.
-            - Precaution: Regular website scanning, secure development practices.
-            - Logging/Monitoring: Website logs, network traffic monitoring.
-          - **Injection Attacks**
-            - SQL/DLL/LDAP/XML Injection Indicators: Unauthorized database access, data manipulation or theft.
-            - Example: A user input that manipulates the SQL query to reveal database information.
-            - Solution: Input validation, use of parameterized queries or prepared statements, secure coding practices.
-            - Vulnerability: Insecure coding, lack of input validation.
-            - Precaution: Regular code reviews, secure development practices.
-            - Logging/Monitoring: Database logs, web server logs, application logs.
-          - **Pointer/Object Dereference**
-            - Indicators: Application crashes, unexpected behavior.
-            - Example: An application trying to access a memory space that's already been freed.
-            - Solution: Proper memory management, secure coding practices.
-            - Vulnerability: Poor memory management in code.
-            - Precaution: Regular code reviews, secure development practices.
-            - Logging/Monitoring: Application error logs, debug logs.
-          - **Directory Traversal**
-            - Indicators: Unauthorized file or directory access.
-            - Example: A URL manipulation that accesses files outside the intended directory.
-            - Solution: Path sanitization, input validation, secure coding practices.
-            - Vulnerability: Insecure server configurations, lack of input validation.
-            - Precaution: Regular server audits, secure development practices.
-            - Logging/Monitoring: Web server logs, file system access logs.
-          - **Buffer Overflows**
-            - Indicators: Application crashes, unauthorized code execution.
-            - Example: An application receiving more data than it can handle, causing it to overwrite adjacent memory.
-            - Solution: Secure coding practices, input validation, regular patching.
-            - Vulnerability: Lack of boundary checks in code, outdated software.
-            - Precaution: Regular code reviews, secure development practices.
-      - Did it involve Race Conditions, Time of Check/Time of Use, Error Handling, Improper Input Handling, Replay Attack, Integer Overflow, Request Forgeries, API Attacks, Resource Exhaustion, Memory Leak, SSL Stripping, Driver Manipulation, or Pass the Hash?
-        - Yes
-          - **Race Conditions**
-            - Indicators: Unusual system behavior, data inconsistency.
-            - Example: Two processes are trying to change the same data concurrently leading to unexpected results.
-            - Solution: Proper synchronization and locking mechanisms in software.
-            - Vulnerability: Concurrency issues in software.
-            - Precaution: Good programming practices, thorough testing.
-            - Logging/Monitoring: System logs, application logs.
-          - **Time of Check/Time of Use (TOCTOU)**
-            - Indicators: Unexpected access or permissions, data inconsistency.
-            - Example: An attacker exploits the time gap between a check being made and the use of the checked object.
-            - Solution: Atomic operations, minimize time window between check and use.
-            - Vulnerability: Weak synchronization mechanisms in software.
-            - Precaution: Good programming practices, thorough testing.
-            - Logging/Monitoring: System logs, application logs.
-          - **Error Handling**
-            - Indicators: Unusual system errors, sensitive data exposure.
-            - Example: A system reveals sensitive data in error messages.
-            - Solution: Proper error handling in software, not revealing sensitive data in error messages.
-            - Vulnerability: Poor error handling practices.
-            - Precaution: Good programming practices, secure coding guidelines.
-            - Logging/Monitoring: System logs, application logs.
-          - **Improper Input Handling**
-            - Indicators: Unexpected system behavior, data corruption.
-            - Example: An attacker exploits a system by providing malicious input data.
-            - Solution: Input validation, sanitization, and encoding.
-            - Vulnerability: Lack of input validation in software.
-            - Precaution: Secure coding practices, thorough testing.
-            - Logging/Monitoring: System logs, application logs.
-          - **Replay Attack**
-            - Indicators: Unexpected transactions, duplicate requests.
-            - Example: An attacker intercepts a network communication and retransmits it.
-            - Solution: Use of timestamping, sequence numbers, one-time passwords.
-            - Vulnerability: Unsecured network communication.
-            - Precaution: Secure network practices, use of secure protocols.
-            - Logging/Monitoring: Network logs, server logs.
-          - **Integer Overflow**
-            - Indicators: Unusual system behavior, crashes.
-            - Example: A software operation results in an integer value exceeding the maximum, causing unpredictable behavior.
-            - Solution: Proper bounds checking in software.
-            - Vulnerability: Lack of bounds checking in software.
-            - Precaution: Good programming practices, thorough testing.
-            - Logging/Monitoring: System logs, application logs.
-          - **Request Forgeries (Server-Side, Cross-Site)**
-            - Indicators: Unusual server requests, user complaints about unexpected actions.
-            - Example: An attacker tricks a user's browser into making a malicious request.
-            - Solution: Use anti-CSRF tokens, SameSite cookies, Content Security Policy.
-            - Vulnerability: Weak web application security measures.
-            - Precaution: Regular security audits, secure coding practices.
-            - Logging/Monitoring: Server logs, web traffic logs.
-          - **API Attacks**
-            - Indicators: Unexpected API calls, slow system response.
-            - Example: An attacker exploits API vulnerabilities to gain unauthorized access.
-            - Solution: API rate limiting, authentication and authorization, input validation.
-            - Vulnerability: Insecure API configurations, lack of input validation.
-            - Precaution: Regular API security audits, secure coding practices.
-            - Logging/Monitoring: API logs, server logs.
-          - **Resource Exhaustion**
-            - Indicators: Slow system performance, service unavailability.
-            - Example: An attacker sends excessive requests to exhaust system resources.
-            - Solution: Rate limiting, robust system architecture, failover strategies.
-            - Vulnerability: Lack of resource management in systems.
-            - Precaution: Regular system monitoring, robust system architecture.
-            - Logging/Monitoring: System logs, server logs.
-          - **Memory Leak**
-            - Indicators: Slow system performance, crashes.
-            - Example: A software process fails to release unused memory, gradually consuming all available memory.
-            - Solution: Proper memory management in software.
-            - Vulnerability: Poor programming practices.
-            - Precaution: Regular system monitoring, good programming practices.
-            - Logging/Monitoring: System logs, memory usage logs.
-          - **SSL Stripping**
-            - Indicators: Unsecured connections, user reports of unsecured browsing.
-            - Example: An attacker downgrades a user's connection from HTTPS to HTTP to intercept sensitive data.
-            - Solution: Use of HSTS (HTTP Strict Transport Security), secure browsing practices.
-            - Vulnerability: Unencrypted network traffic.
-            - Precaution: Regular network security audits, secure browsing practices.
-            - Logging/Monitoring: Network logs, web traffic logs.
-          - **Driver Manipulation (Shimming, Refactoring)**
-            - Indicators: Unusual system behavior, unexpected driver activities.
-            - Example: An attacker modifies a device driver to change its behavior.
-            - Solution: Use of trusted drivers, system integrity checks.
-            - Vulnerability: Insecure system configurations, lack of system integrity checks.
-            - Precaution: Regular system monitoring, use of trusted drivers.
-            - Logging/Monitoring: System logs, driver logs.
-          - **Pass the Hash**
-            - Indicators: Unauthorized access, unexpected account activities.
-            - Example: An attacker uses stolen hash of a user's password to authenticate without knowing the actual password.
-            - Solution: Use of Kerberos authentication, regularly changing passwords.
-            - Vulnerability: Weak authentication mechanisms, use of older NTLM authentication.
-            - Precaution: Regular security audits, use of secure authentication mechanisms.
-            - Logging/Monitoring: Authentication logs, account activity logs.
+        - Did it involve password or account compromise?
+          - Yes
+            - **Spraying**
+              - Indicators: Multiple accounts experiencing login attempts with commonly used passwords.
+              - Example: An attacker trying to login to several accounts using a list of most commonly used passwords.
+              - Solution: Account lockout policies, use complex passwords, multi-factor authentication.
+              - Vulnerability: Weak passwords, no account lockout policy.
+              - Precaution: Regular password changes, user education on password security.
+              - Logging/Monitoring: Account authentication logs, intrusion detection system (IDS).
+            - **Dictionary Attack**
+              - Indicators: Multiple login attempts using words from a dictionary.
+              - Example: An attacker using a software that tries every word in a dictionary as a password.
+              - Solution: Account lockout policies, use complex passwords, multi-factor authentication.
+              - Vulnerability: Weak passwords, no account lockout policy.
+              - Precaution: Regular password changes, user education on password security.
+              - Logging/Monitoring: Account authentication logs, IDS.
+            - **Brute Force**
+              - Indicators: Multiple login attempts using all possible combinations.
+              - Example: An attacker using a software that tries every possible combination of characters as a password.
+              - Solution: Account lockout policies, use complex passwords, multi-factor authentication.
+              - Vulnerability: Weak passwords, no account lockout policy.
+              - Precaution: Regular password changes, user education on password security.
+              - Logging/Monitoring: Account authentication logs, IDS.
+            - **Offline**
+              - Indicators: Unauthorized access, data breach.
+              - Example: An attacker stealing a password hash file and cracking it offline.
+              - Solution: Encrypt stored password hashes, limit access to password hash files, use salted hashes.
+              - Vulnerability: Unencrypted or unsalted password hashes, poor access control.
+              - Precaution: Regular audits, user education on password security.
+              - Logging/Monitoring: Access logs, file integrity monitoring, IDS.
+            - **Rainbow Table**
+              - Indicators: Unauthorized access, data breach.
+              - Example: An attacker using precomputed hash values (rainbow table) to quickly find passwords.
+              - Solution: Use salted hashes, limit access to password hash files.
+              - Vulnerability: Unsalted password hashes, poor access control.
+              - Precaution: Regular audits, user education on password security.
+              - Logging/Monitoring: Access logs, file integrity monitoring, IDS.
+        - Did it involve domain names or web traffic manipulation?
+          - Yes
+            - **Pharming**
+              - Indicators: Unexpected redirection to fake website, SSL/TLS certificate errors.
+              - Example: A user is redirected to a malicious site even though the correct URL was entered.
+              - Solution: Use HTTPS, check for SSL/TLS certificate, DNSSEC.
+              - Vulnerability: Unsecured DNS, user unawareness.
+              - Precaution: Secure DNS settings, user education about secure browsing.
+              - Logging/Monitoring: Network traffic monitoring, DNS logs.
+            - **Watering Hole**
+              - Indicators: Legitimate website delivering malware, targeted users experiencing breaches.
+              - Example: A popular tech blog being compromised to target its visitors.
+              - Solution: Regular website scanning for vulnerabilities, use secure web gateways.
+              - Vulnerability: Vulnerable web servers, unaware users.
+              - Precaution: Regular web vulnerability scanning, user education on safe browsing.
+              - Logging/Monitoring: Website logs, network traffic monitoring, IDS.
+            - **Typosquatting**
+              - Indicators: Visiting a similar but incorrect website due to a typing error, SSL/TLS certificate errors.
+              - Example: A user types "gogle.com" instead of "google.com" and lands on a malicious site.
+              - Solution: User awareness, bookmark important websites, use security tools to detect such sites.
+              - Vulnerability: User unawareness, similar-looking domain names.
+              - Precaution: User education, use browsing security tools.
+              - Logging/Monitoring: Browser history, network traffic monitoring.
+        - Did it involve the use or abuse of AI/ML, compromise of third-party services or software, or cryptographic attacks?
+          - Yes
+            - **Adversarial AI/ML**
+              - Indicators: Unexpected AI/ML outputs, data poisoning.
+              - Example: Attackers manipulating training data to change AI behavior.
+              - Solution: Robust AI/ML models, validating training data, secure ML pipelines.
+              - Vulnerability: Unsecured training data, unvalidated inputs.
+              - Precaution: Regular audits of training data, secure ML practices.
+              - Logging/Monitoring: Monitor training data and ML outputs.
+            - **Supply-Chain Attacks**
+              - Indicators: Unusual behavior in third-party services or software.
+              - Example: The SolarWinds breach in 2020.
+              - Solution: Regular audits of third-party services, secure software development practices, updated software versions.
+              - Vulnerability: Unvalidated third-party software, outdated software versions.
+              - Precaution: Regular software audits, prompt updates.
+              - Logging/Monitoring: System behavior logs, network traffic monitoring.
+            - **Cryptographic Attacks**
+              - Indicators: Unauthorized access, data breaches.
+              - Example: Birthday attack, where two different inputs produce the same hash.
+              - Solution: Use of strong cryptographic algorithms, updated encryption protocols.
+              - Vulnerability: Weak or outdated cryptographic algorithms.
+              - Precaution: Regular cryptographic audits, updated protocols.
+              - Logging/Monitoring: Access logs, data breach detection systems.
+        - Did it involve Privilege escalation, Cross-site scripting, Injection, Pointer/object dereference, Directory traversal, or Buffer overflows?
+          - Yes
+            - **Privilege Escalation**
+              - Indicators: Unauthorized activities or access.
+              - Example: A regular user gaining administrative rights due to a software flaw.
+              - Solution: Implement least privilege principle, patching and updates, secure coding practices.
+              - Vulnerability: Software flaws, misconfigured permissions.
+              - Precaution: Regular system audits, prompt software updates.
+              - Logging/Monitoring: System access logs, behavior monitoring.
+              - Explanation: Privilege escalation refers to the unauthorized elevation of user privileges, allowing an attacker to gain higher levels of access than originally intended. This can lead to unauthorized activities and compromise the security of a system or network.
+            - **Cross-Site Scripting (XSS)**
+              - Indicators: Unwanted scripts running on webpages, user data theft.
+              - Example: A malicious script inserted into a comment on a blog that steals user cookie data.
+              - Solution: Input validation, secure coding practices, HTTPOnly cookies.
+              - Vulnerability: Insufficient input validation, insecure website coding.
+              - Precaution: Regular website scanning, secure development practices.
+              - Logging/Monitoring: Website logs, network traffic monitoring.
+              - Explanation: Cross-Site Scripting (XSS) is a web application vulnerability where attackers inject malicious scripts into webpages viewed by other users. This can lead to the theft of sensitive user data or unauthorized actions performed on behalf of the user.
+            - Injection Attacks
+              - Structured query language (SQL)
+                - Indicators: Unauthorized database access, data manipulation or theft.
+                - Example: A user input that manipulates the SQL query to reveal database information.
+                - Solution: Input validation, use of parameterized queries or prepared statements, secure coding practices.
+                - Vulnerability: Insecure coding, lack of input validation.
+                - Precaution: Regular code reviews, secure development practices.
+                - Logging/Monitoring: Database logs, web server logs, application logs.
+                - Explanation: Injection attacks involve malicious inputs that are executed within an application's code or interpreted by an underlying system. SQL injection, for example, exploits vulnerabilities in database queries to gain unauthorized access or manipulate data.
 
-  - **Wireless Attacks**
-    - **Evil Twin**
-      - Indicators: Unexplained network connectivity issues, Two networks with the same name.
-      - Example: An attacker sets up a WiFi access point with the same name as a legitimate one.
-      - Solution: Network encryption, multi-factor authentication, user education.
-      - Vulnerability: Open WiFi networks, lack of user awareness.
-      - Precaution: Using only trusted WiFi networks, network monitoring.
-      - Logging/Monitoring: Network logs, Wireless Intrusion Prevention Systems (WIPS).
-    - **Rogue Access Point**
-      - Indicators: Unknown WiFi network appearing in the network list.
-      - Example: An employee unknowingly installs an unauthorized WiFi access point.
-      - Solution: Regular network audits, policy for adding new hardware.
-      - Vulnerability: Lack of security policies and network monitoring.
-      - Precaution: Strict security policies, network monitoring.
-      - Logging/Monitoring: Network logs, WIPS.
-    - **Bluesnarfing**
-      - Indicators: Unauthorized access to Bluetooth devices, unexplained device behavior.
-      - Example: An attacker accesses information from a Bluetooth-enabled device without permission.
-      - Solution: Disabling Bluetooth when not in use, updating Bluetooth firmware, keeping device non-discoverable.
-      - Vulnerability: Open Bluetooth connections, outdated Bluetooth firmware.
-      - Precaution: Using Bluetooth responsibly, regular device updates.
-      - Logging/Monitoring: Device logs, network logs.
-    - **Bluejacking**
-      - Indicators: Unsolicited messages or connections on Bluetooth devices.
-      - Example: An attacker sends unsolicited messages to a Bluetooth-enabled device.
-      - Solution: Keeping Bluetooth devices non-discoverable, disable Bluetooth when not in use.
-      - Vulnerability: Open Bluetooth connections.
-      - Precaution: Using Bluetooth responsibly, regular device updates.
-      - Logging/Monitoring: Device logs, network logs.
-    - **RFID**
-      - Indicators: Unauthorized access to RFID systems, unexplained activities.
-      - Example: An attacker uses an RFID reader to steal information from an RFID chip.
-      - Solution: Use of RFID protective wallets or sleeves, disabling RFID when not in use.
-      - Vulnerability: Open RFID chips, lack of encryption.
-      - Precaution: Using RFID responsibly, keeping RFID devices secure.
-      - Logging/Monitoring: RFID system logs.
-    - **Disassociation**
-      - Indicators: Frequent and unexpected disconnections from a wireless network.
-      - Example: An attacker sends disassociation frames to disconnect legitimate users from a wireless network.
-      - Solution: Use secure and encrypted wireless protocols, monitor for disassociation events.
-      - Vulnerability: Lack of encryption and authentication mechanisms in wireless networks.
-      - Precaution: Regularly update wireless access points, monitor network for disassociation events.
-      - Logging/Monitoring: Wireless access point logs, network logs.
-    - **Jamming**
-      - Indicators: Complete or partial loss of wireless signal, disruption of wireless communication.
-      - Example: An attacker floods the wireless frequency spectrum with interference, causing disruption.
-      - Solution: Use frequency-hopping spread spectrum (FHSS) or direct-sequence spread spectrum (DSSS) techniques.
-      - Vulnerability: Lack of wireless signal monitoring and interference detection mechanisms.
-      - Precaution: Implement wireless signal monitoring, utilize spectrum analysis tools.
-      - Logging/Monitoring: Wireless access point logs, spectrum analysis logs.
-    - **Near-Field Communication (NFC)**
-      - Indicators: Unauthorized transactions or data transfers, unexpected NFC device behavior.
-      - Example: An attacker intercepts NFC communication to steal sensitive information or initiate unauthorized transactions.
-      - Solution: Enable NFC only when needed, implement secure NFC protocols, and use tamper-resistant NFC tags.
-      - Vulnerability: Weak or unsecured NFC communication channels, lack of NFC security protocols.
-      - Precaution: Regularly monitor NFC transactions, use secure NFC protocols.
-      - Logging/Monitoring: NFC transaction logs, device logs.
-    - **Initialization Vector (IV)**
-      - Indicators: Insecure encryption, weak security protocols, vulnerable cryptographic algorithms.
-      - Example: An attacker exploits a weak IV value to compromise encrypted data or bypass security controls.
-      - Solution: Use strong and random IV values, implement secure encryption protocols.
-      - Vulnerability: Insecure encryption implementations, lack of secure IV generation.
-      - Precaution: Regularly update encryption algorithms, use secure cryptographic libraries.
-      - Logging/Monitoring: System logs, encryption algorithm logs.
+              - Dynamic-link library (DLL)
+                - Indicators: Unauthorized access, execution of malicious code.
+                - Example: An application loading a malicious DLL file that performs unauthorized actions.
+                - Solution: Verify DLL integrity, implement secure loading procedures, perform code signing.
+                - Vulnerability: DLL hijacking, insecure DLL loading.
+                - Precaution: Regular DLL checks, secure development practices.
+                - Logging/Monitoring: Application logs, system logs.
+                - Explanation: DLL injection involves loading a malicious DLL file into a legitimate process, allowing an attacker to execute unauthorized code or gain access to system resources.
 
-  - **Layer 2 Attacks**
-    - **ARP Poisoning**
-      - Indicators: Increased number of ARP requests and replies, IP-MAC pairs not matching network records.
-      - Example: An attacker sends false ARP messages to link their MAC address with the IP of a legitimate user.
-      - Solution: Implement dynamic ARP inspection (DAI), use of private VLANs.
-      - Vulnerability: Unsecured ARP tables.
-      - Precaution: Regular inspection and validation of ARP tables.
-      - Logging/Monitoring: Network monitoring tools that capture ARP traffic, intrusion detection systems.
-    - **MAC Flooding**
-      - Indicators: Slowness or unavailability of network resources, unusually high number of MAC addresses on a switch.
-      - Example: An attacker floods the switch's MAC address table with random addresses, causing it to fail and broadcast all packets.
-      - Solution: Enable port security on the switch, limiting the number of MAC addresses per port.
-      - Vulnerability: Switches with no MAC address limits per port.
-      - Precaution: Configure switches with proper security measures.
-      - Logging/Monitoring: Network traffic analysis, MAC address table inspection.
-    - **MAC Cloning**
-      - Indicators: Duplicate MAC addresses on a network, network connectivity issues.
-      - Example: An attacker clones the MAC address of a legitimate device to gain unauthorized network access.
-      - Solution: Implement MAC address filtering, network access control measures.
-      - Vulnerability: Lack of MAC address authentication and control mechanisms.
-      - Precaution: Regularly monitor MAC address assignments, use network access control lists.
-      - Logging/Monitoring: Network logs, MAC address tracking.
-  - **DNS Attacks**
-    - **DNS Poisoning**
-      - Indicators: Incorrect IP resolution, unusual network traffic to certain domains.
-      - Example: An attacker changes the DNS entry in the server to redirect traffic to a malicious site.
-      - Solution: Use DNSSEC to provide authentication and integrity to DNS data.
-      - Vulnerability: Unsecured DNS server.
-      - Precaution: Regularly update and patch DNS servers.
-      - Logging/Monitoring: DNS server logs, network traffic analysis.
-    - **Domain Hijacking**
-      - Indicators: Changes in WHOIS data, unauthorized DNS changes, website unavailability.
-      - Example: An attacker takes over a domain by changing the registration information.
-      - Solution: Implement Registrar Lock, enable multi-factor authentication.
-      - Vulnerability: Weak registrar security, weak account passwords.
-      - Precaution: Regularly monitor WHOIS data, update account security.
-      - Logging/Monitoring: WHOIS data monitoring, DNS server logs.
-    - **URL Redirection**
-      - Indicators: Users redirected to unexpected websites, unusual URL behavior.
-      - Example: An attacker modifies DNS or network settings to redirect users to malicious websites.
-      - Solution: Implement DNSSEC, use secure DNS servers, monitor for unauthorized DNS changes.
-      - Vulnerability: Weak DNS server security, lack of DNS monitoring.
-      - Precaution: Regularly update DNS server software, monitor DNS configuration changes.
-      - Logging/Monitoring: DNS server logs, network traffic logs.
-    - **Domain Reputation**
-      - Indicators: Email or website classification as spam or malicious, blacklisted domains.
-      - Example: An attacker uses a domain with a poor reputation to launch phishing or malware campaigns.
-      - Solution: Regularly monitor domain reputation, implement proper email and web security measures.
-      - Vulnerability: Compromised or malicious domains, lack of reputation monitoring.
-      - Precaution: Regularly check domain reputation, employ proper email and web security practices.
-      - Logging/Monitoring: Domain reputation services, email and web security logs.
+              - Lightweight Directory Access Protocol (LDAP)
+                - Indicators: Unauthorized access, data manipulation.
+                - Example: An LDAP query manipulated to retrieve sensitive information.
+                - Solution: Input validation, secure coding practices, LDAP filters and permissions.
+                - Vulnerability: Insufficient input validation, misconfigured LDAP permissions.
+                - Precaution: Regular code reviews, secure development practices.
+                - Logging/Monitoring: Application logs, system logs.
+                - Explanation: LDAP injection refers to the manipulation of LDAP queries to gain unauthorized access to directory services or retrieve sensitive information. This can occur when input is not properly validated or when LDAP filters and permissions are misconfigured.
+            - **Pointer/Object Dereference**
+              - Indicators: Application crashes, unexpected behavior.
+              - Example: An application trying to access a memory space that's already been freed.
+              - Solution: Proper memory management, secure coding practices.
+              - Vulnerability: Poor memory management in code.
+              - Precaution: Regular code reviews, secure development practices.
+              - Logging/Monitoring: Application error logs, debug logs.
+            - **Directory Traversal**
+              - Indicators: Unauthorized file or directory access.
+              - Example: A URL manipulation that accesses files outside the intended directory.
+              - Solution: Path sanitization, input validation, secure coding practices.
+              - Vulnerability: Insecure server configurations, lack of input validation.
+              - Precaution: Regular server audits, secure development practices.
+              - Logging/Monitoring: Web server logs, file system access logs.
+              - Explanation: Directory Traversal (also known as Path Traversal) occurs when an attacker exploits insufficient input validation to access files or directories outside the intended scope. This can lead to unauthorized access to sensitive files or system configuration information.
 
-  - **Distributed Denial-of-Service (DDoS)**
-    - **Network**
-      - Indicators: High network traffic, network slowdown, service unavailability.
-      - Example: An attacker floods a network with excessive traffic, causing denial of service.
-      - Solution: Use traffic filtering, rate limiting, and employ DDoS mitigation services.
-      - Vulnerability: Insufficient network bandwidth and capacity, lack of traffic monitoring and filtering.
-      - Precaution: Regularly monitor network traffic, implement network traffic analysis tools.
-      - Logging/Monitoring: Network traffic logs, intrusion detection systems.
-    - **Application**
-      - Indicators: Application unavailability, slow response times, unusual application behavior.
-      - Example: An attacker overwhelms an application with excessive requests, rendering it inaccessible.
-      - Solution: Implement application-layer firewalls, load balancing, and rate limiting mechanisms.
-      - Vulnerability: Poor application design, lack of application-layer security measures.
-      - Precaution: Regularly update and patch applications, implement application-level security measures.
-      - Logging/Monitoring: Application logs, web server logs, intrusion detection systems.
-    - **Operational Technology (OT)**
-      - Indicators: Disruption of industrial control systems, equipment malfunctioning.
-      - Example: An attacker targets OT systems to disrupt critical infrastructure or industrial processes.
-      - Solution: Implement secure OT network segmentation, intrusion detection systems for OT environments.
-      - Vulnerability: Insufficient OT security measures, lack of OT network segregation.
-      - Precaution: Regularly update OT systems, implement OT-specific security solutions.
-      - Logging/Monitoring: OT system logs, network traffic analysis, intrusion detection systems.
-  - **Malicious Code or Script Execution**
-    - PowerShell, Python, Bash, Macros, Visual Basic for Applications (VBA)
-      - Indicators: Unusual or unexpected system behavior, unauthorized code execution.
-      - Example: An attacker uses a malicious script or code to exploit vulnerabilities in systems or applications.
-      - Solution: Implement code signing, regularly update scripting environments, and use trusted sources for scripts.
-      - Vulnerability: Poorly secured scripting environments, untrusted scripts or code execution.
-      - Precaution: Regularly update scripting environments, use reputable sources for scripts.
-      - Logging/Monitoring: System logs, antivirus/antimalware logs, script execution logs.
-    - **PowerShell**
-      - Indicators: Unusual or unexpected system behavior, unauthorized PowerShell script execution.
-      - Example: An attacker uses PowerShell scripts to exploit vulnerabilities, execute malicious commands, or automate malicious activities.
-      - Solution: Implement PowerShell script execution policies, enforce secure coding practices, and regularly update PowerShell to mitigate known vulnerabilities.
-      - Vulnerability: Lack of PowerShell script execution restrictions, insecure coding practices in PowerShell scripts.
-      - Precaution: Regularly update PowerShell, restrict script execution by applying least privilege principles, and use application whitelisting to prevent unauthorized scripts.
-      - Logging/Monitoring: Monitor PowerShell script execution logs, audit PowerShell-related events, and leverage endpoint detection and response (EDR) solutions.
+            - **Buffer Overflows**
+              - Indicators: Application crashes, unauthorized code execution.
+              - Example: An application receiving more data than it can handle, causing it to overwrite adjacent memory.
+              - Solution: Secure coding practices, input validation, regular patching.
+              - Vulnerability: Lack of boundary checks in code, outdated software.
+              - Precaution: Regular code reviews, secure development practices.
+              - Explanation: Buffer Overflow refers to the exploitation of a vulnerability where an application receives more data than it can handle, causing it to overwrite adjacent memory space. This can lead to application crashes or unauthorized code execution. Proper input validation and secure coding practices can help prevent buffer overflow vulnerabilities.
+        - Did it involve Race Conditions, Time of Check/Time of Use, Error Handling, Improper Input Handling, Replay Attack, Integer Overflow, Request Forgeries, API Attacks, Resource Exhaustion, Memory Leak, SSL Stripping, Driver Manipulation, or Pass the Hash?
+          - Yes
+            - **Race Conditions**
+              - Indicators: Unusual system behavior, data inconsistency.
+              - Example: Two processes are trying to change the same data concurrently leading to unexpected results.
+              - Solution: Proper synchronization and locking mechanisms in software.
+              - Vulnerability: Concurrency issues in software.
+              - Precaution: Good programming practices, thorough testing.
+              - Logging/Monitoring: System logs, application logs.
+            - **Time of Check/Time of Use (TOCTOU)**
+              - Indicators: Unexpected access or permissions, data inconsistency.
+              - Example: An attacker exploits the time gap between a check being made and the use of the checked object.
+              - Solution: Atomic operations, minimize time window between check and use.
+              - Vulnerability: Weak synchronization mechanisms in software.
+              - Precaution: Good programming practices, thorough testing.
+              - Logging/Monitoring: System logs, application logs.
+            - **Error Handling**
+              - Indicators: Unusual system errors, sensitive data exposure.
+              - Example: A system reveals sensitive data in error messages.
+              - Solution: Proper error handling in software, not revealing sensitive data in error messages.
+              - Vulnerability: Poor error handling practices.
+              - Precaution: Good programming practices, secure coding guidelines.
+              - Logging/Monitoring: System logs, application logs.
+            - **Improper Input Handling**
+              - Indicators: Unexpected system behavior, data corruption.
+              - Example: An attacker exploits a system by providing malicious input data.
+              - Solution: Input validation, sanitization, and encoding.
+              - Vulnerability: Lack of input validation in software.
+              - Precaution: Secure coding practices, thorough testing.
+              - Logging/Monitoring: System logs, application logs.
+            - **Replay Attack**
+              - Indicators: Unexpected transactions, duplicate requests.
+              - Example: An attacker intercepts a network communication and retransmits it.
+              - Solution: Use of timestamping, sequence numbers, one-time passwords.
+              - Vulnerability: Unsecured network communication.
+              - Precaution: Secure network practices, use of secure protocols.
+              - Logging/Monitoring: Network logs, server logs.
+            - **Integer Overflow**
+              - Indicators: Unusual system behavior, crashes.
+              - Example: A software operation results in an integer value exceeding the maximum, causing unpredictable behavior.
+              - Solution: Proper bounds checking in software.
+              - Vulnerability: Lack of bounds checking in software.
+              - Precaution: Good programming practices, thorough testing.
+              - Logging/Monitoring: System logs, application logs.
+            - **Request Forgeries (Server-Side, Cross-Site)**
+              - Indicators: Unusual server requests, user complaints about unexpected actions.
+              - Example: An attacker tricks a user's browser into making a malicious request.
+              - Solution: Use anti-CSRF tokens, SameSite cookies, Content Security Policy.
+              - Vulnerability: Weak web application security measures.
+              - Precaution: Regular security audits, secure coding practices.
+              - Logging/Monitoring: Server logs, web traffic logs.
+            - **API Attacks**
+              - Indicators: Unexpected API calls, slow system response.
+              - Example: An attacker exploits API vulnerabilities to gain unauthorized access.
+              - Solution: API rate limiting, authentication and authorization, input validation.
+              - Vulnerability: Insecure API configurations, lack of input validation.
+              - Precaution: Regular API security audits, secure coding practices.
+              - Logging/Monitoring: API logs, server logs.
+            - **Resource Exhaustion**
+              - Indicators: Slow system performance, service unavailability.
+              - Example: An attacker sends excessive requests to exhaust system resources.
+              - Solution: Rate limiting, robust system architecture, failover strategies.
+              - Vulnerability: Lack of resource management in systems.
+              - Precaution: Regular system monitoring, robust system architecture.
+              - Logging/Monitoring: System logs, server logs.
+            - **Memory Leak**
+              - Indicators: Slow system performance, crashes.
+              - Example: A software process fails to release unused memory, gradually consuming all available memory.
+              - Solution: Proper memory management in software.
+              - Vulnerability: Poor programming practices.
+              - Precaution: Regular system monitoring, good programming practices.
+              - Logging/Monitoring: System logs, memory usage logs.
+            - **SSL Stripping**
+              - Indicators: Unsecured connections, user reports of unsecured browsing.
+              - Example: An attacker downgrades a user's connection from HTTPS to HTTP to intercept sensitive data.
+              - Solution: Use of HSTS (HTTP Strict Transport Security), secure browsing practices.
+              - Vulnerability: Unencrypted network traffic.
+              - Precaution: Regular network security audits, secure browsing practices.
+              - Logging/Monitoring: Network logs, web traffic logs.
+            - **Driver Manipulation (Shimming, Refactoring)**
+              - Indicators: Unusual system behavior, unexpected driver activities.
+              - Example: An attacker modifies a device driver to change its behavior.
+              - Solution: Use of trusted drivers, system integrity checks.
+              - Vulnerability: Insecure system configurations, lack of system integrity checks.
+              - Precaution: Regular system monitoring, use of trusted drivers.
+              - Logging/Monitoring: System logs, driver logs.
+            - **Pass the Hash**
+              - Indicators: Unauthorized access, unexpected account activities.
+              - Example: An attacker uses stolen hash of a user's password to authenticate without knowing the actual password.
+              - Solution: Use of Kerberos authentication, regularly changing passwords.
+              - Vulnerability: Weak authentication mechanisms, use of older NTLM authentication.
+              - Precaution: Regular security audits, use of secure authentication mechanisms.
+              - Logging/Monitoring: Authentication logs, account activity logs.
 
-    - **Python**
-      - Indicators: Unusual or unexpected system behavior, unauthorized Python script execution.
-      - Example: An attacker utilizes Python scripts to exploit vulnerabilities, manipulate data, or perform malicious operations on a targeted system.
-      - Solution: Promote secure coding practices, validate user inputs to prevent injection attacks, and keep Python libraries and dependencies up to date.
-      - Vulnerability: Unrestricted execution of untrusted Python scripts, insecure coding practices leading to code vulnerabilities.
-      - Precaution: Restrict execution of untrusted Python scripts, use sandboxing techniques to isolate potentially malicious code, and implement code review processes.
-      - Logging/Monitoring: Monitor Python script execution logs, log abnormal behavior or resource usage, and leverage intrusion detection systems (IDS) or EDR solutions.
+    - **Wireless Attacks**
+      - **Evil Twin**
+        - Indicators: Unexplained network connectivity issues, Two networks with the same name.
+        - Example: An attacker sets up a WiFi access point with the same name as a legitimate one.
+        - Solution: Network encryption, multi-factor authentication, user education.
+        - Vulnerability: Open WiFi networks, lack of user awareness.
+        - Precaution: Using only trusted WiFi networks, network monitoring.
+        - Logging/Monitoring: Network logs, Wireless Intrusion Prevention Systems (WIPS).
+      - **Rogue Access Point**
+        - Indicators: Unknown WiFi network appearing in the network list.
+        - Example: An employee unknowingly installs an unauthorized WiFi access point.
+        - Solution: Regular network audits, policy for adding new hardware.
+        - Vulnerability: Lack of security policies and network monitoring.
+        - Precaution: Strict security policies, network monitoring.
+        - Logging/Monitoring: Network logs, WIPS.
+      - **Bluesnarfing**
+        - Indicators: Unauthorized access to Bluetooth devices, unexplained device behavior.
+        - Example: An attacker accesses information from a Bluetooth-enabled device without permission.
+        - Solution: Disabling Bluetooth when not in use, updating Bluetooth firmware, keeping device non-discoverable.
+        - Vulnerability: Open Bluetooth connections, outdated Bluetooth firmware.
+        - Precaution: Using Bluetooth responsibly, regular device updates.
+        - Logging/Monitoring: Device logs, network logs.
+      - **Bluejacking**
+        - Indicators: Unsolicited messages or connections on Bluetooth devices.
+        - Example: An attacker sends unsolicited messages to a Bluetooth-enabled device.
+        - Solution: Keeping Bluetooth devices non-discoverable, disable Bluetooth when not in use.
+        - Vulnerability: Open Bluetooth connections.
+        - Precaution: Using Bluetooth responsibly, regular device updates.
+        - Logging/Monitoring: Device logs, network logs.
+      - **RFID**
+        - Indicators: Unauthorized access to RFID systems, unexplained activities.
+        - Example: An attacker uses an RFID reader to steal information from an RFID chip.
+        - Solution: Use of RFID protective wallets or sleeves, disabling RFID when not in use.
+        - Vulnerability: Open RFID chips, lack of encryption.
+        - Precaution: Using RFID responsibly, keeping RFID devices secure.
+        - Logging/Monitoring: RFID system logs.
+      - **Disassociation**
+        - Indicators: Frequent and unexpected disconnections from a wireless network.
+        - Example: An attacker sends disassociation frames to disconnect legitimate users from a wireless network.
+        - Solution: Use secure and encrypted wireless protocols, monitor for disassociation events.
+        - Vulnerability: Lack of encryption and authentication mechanisms in wireless networks.
+        - Precaution: Regularly update wireless access points, monitor network for disassociation events.
+        - Logging/Monitoring: Wireless access point logs, network logs.
+      - **Jamming**
+        - Indicators: Complete or partial loss of wireless signal, disruption of wireless communication.
+        - Example: An attacker floods the wireless frequency spectrum with interference, causing disruption.
+        - Solution: Use frequency-hopping spread spectrum (FHSS) or direct-sequence spread spectrum (DSSS) techniques.
+        - Vulnerability: Lack of wireless signal monitoring and interference detection mechanisms.
+        - Precaution: Implement wireless signal monitoring, utilize spectrum analysis tools.
+        - Logging/Monitoring: Wireless access point logs, spectrum analysis logs.
+      - **Near-Field Communication (NFC)**
+        - Indicators: Unauthorized transactions or data transfers, unexpected NFC device behavior.
+        - Example: An attacker intercepts NFC communication to steal sensitive information or initiate unauthorized transactions.
+        - Solution: Enable NFC only when needed, implement secure NFC protocols, and use tamper-resistant NFC tags.
+        - Vulnerability: Weak or unsecured NFC communication channels, lack of NFC security protocols.
+        - Precaution: Regularly monitor NFC transactions, use secure NFC protocols.
+        - Logging/Monitoring: NFC transaction logs, device logs.
+      - **Initialization Vector (IV)**
+        - Indicators: Insecure encryption, weak security protocols, vulnerable cryptographic algorithms.
+        - Example: An attacker exploits a weak IV value to compromise encrypted data or bypass security controls.
+        - Solution: Use strong and random IV values, implement secure encryption protocols.
+        - Vulnerability: Insecure encryption implementations, lack of secure IV generation.
+        - Precaution: Regularly update encryption algorithms, use secure cryptographic libraries.
+        - Logging/Monitoring: System logs, encryption algorithm logs.
 
-    - **Bash**
-      - Indicators: Unusual or unexpected system behavior, unauthorized Bash script execution.
-      - Example: An attacker employs Bash scripts to exploit vulnerabilities, execute system commands, or manipulate system configurations.
-      - Solution: Adhere to secure coding practices, validate user inputs, and maintain updated versions of Bash to address security vulnerabilities.
-      - Vulnerability: Unrestricted execution of untrusted Bash scripts, weak input validation leading to command injection.
-      - Precaution: Restrict execution permissions for untrusted Bash scripts, implement input sanitization, and apply the principle of least privilege.
-      - Logging/Monitoring: Monitor Bash script execution logs, log abnormal behavior or command executions, and utilize IDS or EDR solutions for anomaly detection.
+    - **Layer 2 Attacks**
+      - **ARP Poisoning**
+        - Indicators: Increased number of ARP requests and replies, IP-MAC pairs not matching network records.
+        - Example: An attacker sends false ARP messages to link their MAC address with the IP of a legitimate user.
+        - Solution: Implement dynamic ARP inspection (DAI), use of private VLANs.
+        - Vulnerability: Unsecured ARP tables.
+        - Precaution: Regular inspection and validation of ARP tables.
+        - Logging/Monitoring: Network monitoring tools that capture ARP traffic, intrusion detection systems.
+      - **MAC Flooding**
+        - Indicators: Slowness or unavailability of network resources, unusually high number of MAC addresses on a switch.
+        - Example: An attacker floods the switch's MAC address table with random addresses, causing it to fail and broadcast all packets.
+        - Solution: Enable port security on the switch, limiting the number of MAC addresses per port.
+        - Vulnerability: Switches with no MAC address limits per port.
+        - Precaution: Configure switches with proper security measures.
+        - Logging/Monitoring: Network traffic analysis, MAC address table inspection.
+      - **MAC Cloning**
+        - Indicators: Duplicate MAC addresses on a network, network connectivity issues.
+        - Example: An attacker clones the MAC address of a legitimate device to gain unauthorized network access.
+        - Solution: Implement MAC address filtering, network access control measures.
+        - Vulnerability: Lack of MAC address authentication and control mechanisms.
+        - Precaution: Regularly monitor MAC address assignments, use network access control lists.
+        - Logging/Monitoring: Network logs, MAC address tracking.
+    - **DNS Attacks**
+      - **DNS Poisoning**
+        - Indicators: Incorrect IP resolution, unusual network traffic to certain domains.
+        - Example: An attacker changes the DNS entry in the server to redirect traffic to a malicious site.
+        - Solution: Use DNSSEC to provide authentication and integrity to DNS data.
+        - Vulnerability: Unsecured DNS server.
+        - Precaution: Regularly update and patch DNS servers.
+        - Logging/Monitoring: DNS server logs, network traffic analysis.
+      - **Domain Hijacking**
+        - Indicators: Changes in WHOIS data, unauthorized DNS changes, website unavailability.
+        - Example: An attacker takes over a domain by changing the registration information.
+        - Solution: Implement Registrar Lock, enable multi-factor authentication.
+        - Vulnerability: Weak registrar security, weak account passwords.
+        - Precaution: Regularly monitor WHOIS data, update account security.
+        - Logging/Monitoring: WHOIS data monitoring, DNS server logs.
+      - **URL Redirection**
+        - Indicators: Users redirected to unexpected websites, unusual URL behavior.
+        - Example: An attacker modifies DNS or network settings to redirect users to malicious websites.
+        - Solution: Implement DNSSEC, use secure DNS servers, monitor for unauthorized DNS changes.
+        - Vulnerability: Weak DNS server security, lack of DNS monitoring.
+        - Precaution: Regularly update DNS server software, monitor DNS configuration changes.
+        - Logging/Monitoring: DNS server logs, network traffic logs.
+      - **Domain Reputation**
+        - Indicators: Email or website classification as spam or malicious, blacklisted domains.
+        - Example: An attacker uses a domain with a poor reputation to launch phishing or malware campaigns.
+        - Solution: Regularly monitor domain reputation, implement proper email and web security measures.
+        - Vulnerability: Compromised or malicious domains, lack of reputation monitoring.
+        - Precaution: Regularly check domain reputation, employ proper email and web security practices.
+        - Logging/Monitoring: Domain reputation services, email and web security logs.
 
-    - **Macros**
-      - Indicators: Unusual or unexpected system behavior, unauthorized execution of macros in documents or spreadsheets.
-      - Example: An attacker utilizes macros to deliver malicious payloads, exploit vulnerabilities, or enable remote code execution.
-      - Solution: Disable macros by default, enable macro validation, and educate users on the risks associated with enabling macros from untrusted sources.
-      - Vulnerability: Enabling macros from untrusted sources, lack of macro validation or restrictions.
-      - Precaution: Enable macros only from trusted sources, regularly update antivirus software, and implement email filtering and sandboxing for macro-enabled documents.
-      - Logging/Monitoring: Log macro execution events, monitor document metadata for suspicious macros, and utilize antivirus or EDR solutions.
+    - **Distributed Denial-of-Service (DDoS)**
+      - **Network**
+        - Indicators: High network traffic, network slowdown, service unavailability.
+        - Example: An attacker floods a network with excessive traffic, causing denial of service.
+        - Solution: Use traffic filtering, rate limiting, and employ DDoS mitigation services.
+        - Vulnerability: Insufficient network bandwidth and capacity, lack of traffic monitoring and filtering.
+        - Precaution: Regularly monitor network traffic, implement network traffic analysis tools.
+        - Logging/Monitoring: Network traffic logs, intrusion detection systems.
+      - **Application**
+        - Indicators: Application unavailability, slow response times, unusual application behavior.
+        - Example: An attacker overwhelms an application with excessive requests, rendering it inaccessible.
+        - Solution: Implement application-layer firewalls, load balancing, and rate limiting mechanisms.
+        - Vulnerability: Poor application design, lack of application-layer security measures.
+        - Precaution: Regularly update and patch applications, implement application-level security measures.
+        - Logging/Monitoring: Application logs, web server logs, intrusion detection systems.
+      - **Operational Technology (OT)**
+        - Indicators: Disruption of industrial control systems, equipment malfunctioning.
+        - Example: An attacker targets OT systems to disrupt critical infrastructure or industrial processes.
+        - Solution: Implement secure OT network segmentation, intrusion detection systems for OT environments.
+        - Vulnerability: Insufficient OT security measures, lack of OT network segregation.
+        - Precaution: Regularly update OT systems, implement OT-specific security solutions.
+        - Logging/Monitoring: OT system logs, network traffic analysis, intrusion detection systems.
+    - **Malicious Code or Script Execution**
+      - PowerShell, Python, Bash, Macros, Visual Basic for Applications (VBA)
+        - Indicators: Unusual or unexpected system behavior, unauthorized code execution.
+        - Example: An attacker uses a malicious script or code to exploit vulnerabilities in systems or applications.
+        - Solution: Implement code signing, regularly update scripting environments, and use trusted sources for scripts.
+        - Vulnerability: Poorly secured scripting environments, untrusted scripts or code execution.
+        - Precaution: Regularly update scripting environments, use reputable sources for scripts.
+        - Logging/Monitoring: System logs, antivirus/antimalware logs, script execution logs.
+      - **PowerShell**
+        - Indicators: Unusual or unexpected system behavior, unauthorized PowerShell script execution.
+        - Example: An attacker uses PowerShell scripts to exploit vulnerabilities, execute malicious commands, or automate malicious activities.
+        - Solution: Implement PowerShell script execution policies, enforce secure coding practices, and regularly update PowerShell to mitigate known vulnerabilities.
+        - Vulnerability: Lack of PowerShell script execution restrictions, insecure coding practices in PowerShell scripts.
+        - Precaution: Regularly update PowerShell, restrict script execution by applying least privilege principles, and use application whitelisting to prevent unauthorized scripts.
+        - Logging/Monitoring: Monitor PowerShell script execution logs, audit PowerShell-related events, and leverage endpoint detection and response (EDR) solutions.
 
-    - **Visual Basic for Applications (VBA)**
-      - Indicators: Unusual or unexpected system behavior, unauthorized execution of VBA macros in documents or spreadsheets.
-      - Example: An attacker employs VBA macros to deliver malicious code, exploit vulnerabilities, or perform unauthorized actions on a system.
-      - Solution: Disable VBA macros by default, enable VBA macro validation, and educate users on the risks of enabling macros from untrusted sources.
-      - Vulnerability: Enabling VBA macros from untrusted sources, lack of validation or restrictions on VBA macros.
-      - Precaution: Enable VBA macros only from trusted sources, regularly update antivirus software, and implement document validation and sandboxing.
-      - Logging/Monitoring: Log VBA macro execution events, monitor document metadata for suspicious VBA macros, and utilize antivirus or EDR solutions.
+      - **Python**
+        - Indicators: Unusual or unexpected system behavior, unauthorized Python script execution.
+        - Example: An attacker utilizes Python scripts to exploit vulnerabilities, manipulate data, or perform malicious operations on a targeted system.
+        - Solution: Promote secure coding practices, validate user inputs to prevent injection attacks, and keep Python libraries and dependencies up to date.
+        - Vulnerability: Unrestricted execution of untrusted Python scripts, insecure coding practices leading to code vulnerabilities.
+        - Precaution: Restrict execution of untrusted Python scripts, use sandboxing techniques to isolate potentially malicious code, and implement code review processes.
+        - Logging/Monitoring: Monitor Python script execution logs, log abnormal behavior or resource usage, and leverage intrusion detection systems (IDS) or EDR solutions.
+
+      - **Bash**
+        - Indicators: Unusual or unexpected system behavior, unauthorized Bash script execution.
+        - Example: An attacker employs Bash scripts to exploit vulnerabilities, execute system commands, or manipulate system configurations.
+        - Solution: Adhere to secure coding practices, validate user inputs, and maintain updated versions of Bash to address security vulnerabilities.
+        - Vulnerability: Unrestricted execution of untrusted Bash scripts, weak input validation leading to command injection.
+        - Precaution: Restrict execution permissions for untrusted Bash scripts, implement input sanitization, and apply the principle of least privilege.
+        - Logging/Monitoring: Monitor Bash script execution logs, log abnormal behavior or command executions, and utilize IDS or EDR solutions for anomaly detection.
+
+      - **Macros**
+        - Indicators: Unusual or unexpected system behavior, unauthorized execution of macros in documents or spreadsheets.
+        - Example: An attacker utilizes macros to deliver malicious payloads, exploit vulnerabilities, or enable remote code execution.
+        - Solution: Disable macros by default, enable macro validation, and educate users on the risks associated with enabling macros from untrusted sources.
+        - Vulnerability: Enabling macros from untrusted sources, lack of macro validation or restrictions.
+        - Precaution: Enable macros only from trusted sources, regularly update antivirus software, and implement email filtering and sandboxing for macro-enabled documents.
+        - Logging/Monitoring: Log macro execution events, monitor document metadata for suspicious macros, and utilize antivirus or EDR solutions.
+
+      - **Visual Basic for Applications (VBA)**
+        - Indicators: Unusual or unexpected system behavior, unauthorized execution of VBA macros in documents or spreadsheets.
+        - Example: An attacker employs VBA macros to deliver malicious code, exploit vulnerabilities, or perform unauthorized actions on a system.
+        - Solution: Disable VBA macros by default, enable VBA macro validation, and educate users on the risks of enabling macros from untrusted sources.
+        - Vulnerability: Enabling VBA macros from untrusted sources, lack of validation or restrictions on VBA macros.
+        - Precaution: Enable VBA macros only from trusted sources, regularly update antivirus software, and implement document validation and sandboxing.
+        - Logging/Monitoring: Log VBA macro execution events, monitor document metadata for suspicious VBA macros, and utilize antivirus or EDR solutions.
 
 

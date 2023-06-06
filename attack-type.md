@@ -548,12 +548,23 @@
               - Precaution: Regular network security audits, secure browsing practices.
               - Logging/Monitoring: Network logs, web traffic logs.
             - **Driver Manipulation (Shimming, Refactoring)**
-              - Indicators: Unusual system behavior, unexpected driver activities.
-              - Example: An attacker modifies a device driver to change its behavior.
-              - Solution: Use of trusted drivers, system integrity checks.
-              - Vulnerability: Insecure system configurations, lack of system integrity checks.
-              - Precaution: Regular system monitoring, use of trusted drivers.
-              - Logging/Monitoring: System logs, driver logs.
+              - Shimming
+                  - Indicators: Unexpected modifications or patches in the driver code.
+                  - Example: Adding code or modifying the behavior of a driver to bypass security checks or introduce vulnerabilities.
+                  - Solution: Regular driver updates, integrity checks, secure coding practices.
+                  - Vulnerability: Weak driver security, lack of driver integrity checks.
+                  - Precaution: Validate driver integrity, monitor for unauthorized modifications.
+                  - Logging/Monitoring: Driver logs, system logs, file integrity monitoring.
+                  - Explanation: Shimming is a technique used to modify or intercept functions within a driver to achieve specific outcomes. Attackers can use shimming to bypass security controls, inject malicious code, or manipulate driver behavior, which can lead to system compromise or unauthorized access.
+
+              - Refactoring
+                  - Indicators: Unusual modifications to driver code structure or logic.
+                  - Example: Restructuring or rewriting driver code to introduce vulnerabilities or malicious functionality.
+                  - Solution: Code reviews, secure coding practices, regular security assessments.
+                  - Vulnerability: Weak driver code structure, insecure refactoring practices.
+                  - Precaution: Follow secure development practices, test refactored code for security vulnerabilities.
+                  - Logging/Monitoring: Code change logs, code repository monitoring.
+                  - Explanation: Refactoring involves making structural or logical changes to driver code to improve efficiency or maintainability. However, if done insecurely or with malicious intent, refactoring can introduce vulnerabilities, weaken security controls, or compromise system integrity.
             - **Pass the Hash**
               - Indicators: Unauthorized access, unexpected account activities.
               - Example: An attacker uses stolen hash of a user's password to authenticate without knowing the actual password.

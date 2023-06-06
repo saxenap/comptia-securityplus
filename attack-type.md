@@ -502,12 +502,23 @@
               - Precaution: Good programming practices, thorough testing.
               - Logging/Monitoring: System logs, application logs.
             - **Request Forgeries (Server-Side, Cross-Site)**
-              - Indicators: Unusual server requests, user complaints about unexpected actions.
-              - Example: An attacker tricks a user's browser into making a malicious request.
-              - Solution: Use anti-CSRF tokens, SameSite cookies, Content Security Policy.
-              - Vulnerability: Weak web application security measures.
-              - Precaution: Regular security audits, secure coding practices.
-              - Logging/Monitoring: Server logs, web traffic logs.
+                - Server-side Request Forgeries (SSRF)
+                  - Indicators: Unusual network requests originating from the server.
+                  - Example: A server making requests to internal or external resources without proper validation.
+                  - Solution: Input validation, whitelist-based URL filtering, network segregation.
+                  - Vulnerability: Lack of input validation, insufficient access controls.
+                  - Precaution: Secure coding practices, proper server configuration.
+                  - Logging/Monitoring: Server logs, network traffic monitoring.
+                  - Explanation: Server-side Request Forgery (SSRF) occurs when an attacker manipulates a server to make requests to unintended internal or external resources. This can lead to unauthorized data exposure, remote code execution, or attacks on internal systems.
+
+                - Cross-Site Request Forgery (CSRF)
+                  - Indicators: Unauthorized actions performed by a user without their knowledge.
+                  - Example: A user unintentionally submitting a form that performs unwanted actions on a targeted website.
+                  - Solution: Use of CSRF tokens, secure coding practices, user awareness.
+                  - Vulnerability: Lack of CSRF protection, insecure session management.
+                  - Precaution: Implement CSRF protection mechanisms, validate user actions.
+                  - Logging/Monitoring: Server logs, web application logs.
+                  - Explanation: Cross-Site Request Forgery (CSRF) involves tricking a user's browser into making unintended and unauthorized actions on a targeted website where the user is authenticated. This can lead to account compromise, unauthorized changes, or data manipulation.
             - **API Attacks**
               - Indicators: Unexpected API calls, slow system response.
               - Example: An attacker exploits API vulnerabilities to gain unauthorized access.

@@ -42,6 +42,100 @@
                   - Vulnerability: Lack of user awareness. Publicly available phone numbers.
                   - Precaution: Regular user training on vishing.
                   - Logging/Monitoring: Call recording (where legal). Regular audits.
+            - Did it involve spam over instant messaging (SPIM)?
+              - Yes
+                - **SPIM**
+                  - Indicators: Unsolicited instant messages with spam content or links.
+                  - Example: Random messages from unknown contacts promoting products or services.
+                  - Solution: Block unknown contacts, avoid clicking on suspicious links, use spam filters.
+                  - Vulnerability: Lack of user awareness. Inadequate instant messaging security measures.
+                  - Precaution: Regular user training on SPIM. Using secure messaging platforms.
+                  - Logging/Monitoring: Instant messaging security solutions that log SPIM attempts. Regular audits.
+            - Did it involve eliciting information or shoulder surfing?
+              - Yes
+                - **Eliciting Information**
+                  - Indicators: Attempts to obtain sensitive information through social engineering techniques.
+                  - Example: A stranger striking up a conversation and asking for personal details.
+                  - Solution: Be cautious with sharing sensitive information. Verify the identity of individuals before disclosing information.
+                  - Vulnerability: Lack of user awareness. Trusting strangers too easily.
+                  - Precaution: Regular user training on social engineering techniques. Developing a cautious mindset.
+                  - Logging/Monitoring: N/A
+                - **Shoulder Surfing**
+                  - Indicators: Someone spying on your activities or sensitive information by looking over your shoulder.
+                  - Example: Someone standing close and trying to see your PIN as you enter it on an ATM.
+                  - Solution: Be aware of your surroundings, shield your activities from prying eyes.
+                  - Vulnerability: Lack of user awareness. Carelessness in protecting sensitive information.
+                  - Precaution: Regular user training on protecting sensitive information. Practicing privacy measures.
+                  - Logging/Monitoring: N/A 
+            - Did it involve prepending or identity fraud?
+              - Yes
+                - **Prepending**
+                  - Indicators: Adding false or misleading information to a message or document.
+                  - Example: Modifying email headers to make the message appear from a trusted source.
+                  - Solution: Verify the authenticity of messages and documents. Pay attention to inconsistencies.
+                  - Vulnerability: Lack of user awareness. Trusting information without verification.
+                  - Precaution: Regular user training on verifying information sources. Checking for signs of tampering.
+                  - Logging/Monitoring: N/A
+                - **Identity Fraud**
+                  - Indicators: Unauthorized use of someone else's personal information for fraudulent purposes.
+                  - Example: Opening credit card accounts in another person's name.
+                  - Solution: Protect personal information, use strong authentication methods, monitor credit reports.
+                  - Vulnerability: Lack of user awareness. Insufficient security measures to protect personal information.
+                  - Precaution: Regular user training on protecting personal information. Using identity theft protection services.
+                  - Logging/Monitoring: N/A
+            - Did it involve invoice scams, credential harvesting, or reconnaissance?
+              - Yes
+                - **Invoice Scams**
+                  - Indicators: Fraudulent invoices sent to trick individuals or businesses into making payments.
+                  - Example: Receiving a fake invoice requesting payment for a non-existent service.
+                  - Solution: Verify the legitimacy of invoices, confirm details with known contacts.
+                  - Vulnerability: Lack of user awareness. Inadequate invoice verification processes.
+                  - Precaution: Regular user training on recognizing invoice scams. Implementing invoice validation procedures.
+                  - Logging/Monitoring: N/A
+                - **Credential Harvesting**
+                  - Indicators: Attempts to obtain login credentials through deceptive methods.
+                  - Example: Creating a fake login page to steal usernames and passwords.
+                  - Solution: Be cautious of login prompts, verify website authenticity, use strong passwords.
+                  - Vulnerability: Lack of user awareness. Falling for deceptive login prompts.
+                  - Precaution: Regular user training on recognizing phishing techniques. Using password managers.
+                  - Logging/Monitoring: N/A
+                - **Reconnaissance**
+                  - Indicators: Gathering information about targets for future attacks.
+                  - Example: Scanning a network to identify vulnerable systems and potential entry points.
+                  - Solution: Monitor network activity, implement intrusion detection systems, apply security patches.
+                  - Vulnerability: Lack of network monitoring. Unpatched systems and software.
+                  - Precaution: Regular network monitoring and vulnerability assessments. Prompt patching of systems.
+                  - Logging/Monitoring: Network traffic monitoring, system logs.
+            - Did it involve hoax, impersonation, pretexting, or influence campaigns?
+              - Yes
+                - **Hoax**
+                  - Indicators: Spreading false information with the intent to deceive or trick others.
+                  - Example: Sharing a fabricated news story to mislead readers.
+                  - Solution: Verify information from trusted sources, fact-check before sharing.
+                  - Vulnerability: Lack of user awareness. Believing and spreading misinformation.
+                  - Precaution: Regular user training on spotting fake news. Promoting media literacy.
+                  - Logging/Monitoring: N/A
+                - **Impersonation**
+                  - Indicators: Pretending to be someone else to deceive or gain unauthorized access.
+                  - Example: Creating a fake social media profile pretending to be a celebrity.
+                  - Solution: Be cautious of unknown contacts, verify identities before trusting or sharing information.
+                  - Vulnerability: Lack of user awareness. Trusting online identities without verification.
+                  - Precaution: Regular user training on online identity verification. Reporting suspicious accounts.
+                  - Logging/Monitoring: N/A
+                - **Pretexting**
+                  - Indicators: Creating a false scenario to deceive individuals and extract information.
+                  - Example: Posing as a bank representative and requesting personal details for a "security check."
+                  - Solution: Be skeptical of unsolicited requests for personal information. Verify the authenticity independently.
+                  - Vulnerability: Lack of user awareness. Trusting requests without independent verification.
+                  - Precaution: Regular user training on recognizing pretexting techniques. Protecting personal information.
+                  - Logging/Monitoring: N/A
+                - **Influence Campaigns**
+                  - Indicators: Coordinated efforts to shape public opinion or manipulate individuals.
+                  - Example: Spreading misinformation through social media to influence election outcomes.
+                  - Solution: Be critical of information sources, fact-check before forming opinions.
+                  - Vulnerability: Lack of user awareness. Falling for manipulative tactics.
+                  - Precaution: Regular user training on recognizing manipulation techniques. Promoting media literacy.
+                  - Logging/Monitoring: N/A
       - Did it involve malware or unwanted software?
         - Yes
           - **Ransomware**

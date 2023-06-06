@@ -173,6 +173,78 @@
             - Vulnerability: Unmonitored system or network activity, lack of advanced threat protection.
             - Precaution: Regular system scans, system hardening, network monitoring.
             - Logging/Monitoring: System logs, IDS, advanced threat protection logs.
+          - **Command and Control (C2)**
+            - Indicators: Communication with a remote server for receiving commands and exfiltrating data.
+            - Example: Malware establishing a connection with a command and control server to receive instructions.
+            - Solution: Detect and block C2 communications, isolate affected systems, remove malware.
+            - Vulnerability: Lack of network monitoring, insufficient security measures.
+            - Precaution: Implement network traffic monitoring, intrusion detection systems, and strong network security controls.
+            - Logging/Monitoring: Network traffic monitoring, IDS, system logs.
+
+          - **Bots**
+            - Indicators: Infected systems controlled remotely for malicious purposes.
+            - Example: Computers participating in a botnet and carrying out coordinated attacks.
+            - Solution: Identify and remove bot infections, implement botnet detection/prevention measures.
+            - Vulnerability: Lack of host-based intrusion detection, unpatched systems.
+            - Precaution: Regular system scans, patching, network segmentation, and monitoring.
+            - Logging/Monitoring: System logs, network traffic monitoring, IDS.
+
+          - **Cryptomalware**
+            - Indicators: Malware that encrypts files and demands ransom for decryption.
+            - Example: CryptoLocker malware that encrypts user files and demands payment for the decryption key.
+            - Solution: Isolate affected systems, remove malware, restore files from backup, avoid paying ransom.
+            - Vulnerability: Lack of user awareness, outdated software, poor security practices.
+            - Precaution: Regular backups, system hardening, user education on safe browsing and email practices.
+            - Logging/Monitoring: Intrusion detection systems, system logs, network traffic monitoring.
+
+          - **Logic Bombs**
+            - Indicators: Malicious code designed to execute a harmful action upon meeting certain conditions.
+            - Example: Code that triggers data deletion upon a specific date or event.
+            - Solution: Identify and remove logic bombs, implement code review and testing procedures.
+            - Vulnerability: Lack of code review, insufficient change management processes.
+            - Precaution: Regular code reviews, strict change management procedures.
+            - Logging/Monitoring: System logs, application logs.
+
+          - **Spyware**
+            - Indicators: Malware that secretly gathers and transmits user information.
+            - Example: Keylogger that captures keystrokes and sends them to an attacker.
+            - Solution: Use anti-spyware software, perform regular system scans, avoid downloading untrusted software.
+            - Vulnerability: Lack of user awareness, downloading untrusted software.
+            - Precaution: Regular system scans, user education on safe browsing and downloading practices.
+            - Logging/Monitoring: System logs, application logs.
+
+          - **Keyloggers**
+            - Indicators: Malware that records keystrokes to capture sensitive information.
+            - Example: Keylogger that captures login credentials and sends them to an attacker.
+            - Solution: Use anti-keylogger software, avoid untrusted software/downloads.
+            - Vulnerability: Lack of user awareness, downloading untrusted software.
+            - Precaution: Regular system scans, user education on safe browsing and downloading practices.
+            - Logging/Monitoring: System logs, application logs.
+
+          - **Remote Access Trojan (RAT)**
+            - Indicators: Malware that provides unauthorized remote access to a compromised system.
+            - Example: RAT that allows an attacker to control a victim's computer remotely.
+            - Solution: Detect and remove RAT infections, implement strong authentication and access controls.
+            - Vulnerability: Lack of host-based intrusion detection, weak authentication methods.
+            - Precaution: Regular system scans, strong authentication mechanisms, network segmentation.
+            - Logging/Monitoring: System logs, network traffic monitoring, IDS.
+
+          - **Rootkit**
+            - Indicators: Malware designed to gain unauthorized access and hide its presence on a system.
+            - Example: Rootkit that provides remote control and hides its files and processes.
+            - Solution: Detect and remove rootkits using specialized tools, restore system integrity.
+            - Vulnerability: Lack of host-based intrusion detection, weak system security practices.
+            - Precaution: Regular system scans, system hardening, host-based intrusion detection.
+            - Logging/Monitoring: System logs, host-based intrusion detection logs.
+
+          - **Backdoor**
+            - Indicators: Malware that creates a hidden entry point to bypass normal authentication.
+            - Example: Backdoor that allows an attacker to gain unauthorized access to a system.
+            - Solution: Detect and remove backdoors, apply security patches, restrict unnecessary services.
+            - Vulnerability: Weak system security practices, unpatched systems.
+            - Precaution: Regular system scans, prompt patching, strict access controls.
+            - Logging/Monitoring: System logs, network traffic monitoring, IDS.
+
       - Did it involve password or account compromise?
         - Yes
           - **Spraying**
